@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-584921376" class="chart">&lt;/div>
+&lt;div id="chart-827356491" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-584921376', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-827356491', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -628,17 +628,15 @@ Create your slides in Markdown - click the &lt;em>Slides&lt;/em> button to check
 &lt;a href="https://uk.mathworks.com/matlabcentral/fileexchange/116955-interface-to-easily-access-fred-data/" target="_blank" rel="noopener">Download&lt;/a> - &lt;a href="https://viewer.mathworks.com/?viewer=live_code&amp;amp;url=https%3A%2F%2Fuk.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Fdf12fc07-8f24-4a9e-9d34-ec3d4403d1ef%2F6a18f45c-03df-407d-bbdd-5eb897afed7c%2Ffiles%2FTutorial%2Ftutorial_fred_api.mlx&amp;amp;embed=web" title="MATLAB page" target="_blank" rel="noopener">tutorial&lt;/a>&lt;/li>
 &lt;/ul></description></item><item><title>Real-Time Macro Monitor</title><link>https://ckarag.github.io/rtmonitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/rtmonitor/</guid><description>&lt;h3 id="us">US&lt;/h3>
 &lt;ul>
-&lt;li>
-&lt;p>This is how you write an inline equation:
-$ \alpha 4 \text{casting} $.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Using state-of-the-art datasets and statistical models for macro nowcasting to monitor economic activity in real-time\&lt;/p>
-&lt;/li>
+&lt;li>This is how you write an inline equation:
+$ \alpha 4 \text{casting} $.&lt;/li>
+&lt;li>This is how you write an inline equation:
+$ \alpha $4casting.&lt;/li>
+&lt;li>Using state-of-the-art datasets and statistical models for macro nowcasting to monitor economic activity in real-time \&lt;/li>
 &lt;/ul>
 &lt;iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ckara/73.embed">&lt;/iframe>
 &lt;ul>
-&lt;li>Determinants of nowcasts&lt;/li>
+&lt;li>Determinants of nowcasts:&lt;/li>
 &lt;/ul>
 &lt;iframe
 src="https://ckarag.github.io/MLinterpret_CPI.gif"
@@ -647,5 +645,5 @@ height="550"
 style="border:none;">
 &lt;/iframe>
 &lt;ul>
-&lt;li>And here is a table&lt;/li>
+&lt;li>And here is a table:&lt;/li>
 &lt;/ul></description></item></channel></rss>
