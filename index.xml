@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-715894236" class="chart">&lt;/div>
+&lt;div id="chart-782496513" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-715894236', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-782496513', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -1023,7 +1023,12 @@ style="border:none;">
 &lt;p>The purpose of the nowcasts in this section is not to give a single number, rather it is to give an indication of how well the latest research published in top academic journals, and highly cited methodologies for nowcasting, perform on a real-time basis.&lt;/p>
 &lt;p>The 1st two plots contain nowcasts based on two state-of-the-art nowcasting methodologies. The two methodologies are the &lt;em>Factor-augmented AR (FAR)&lt;/em> methodology of Stock-Watson (2002), and the &lt;em>Sg-LASSO-MIDAS&lt;/em> by Babii et al. (2022). The nowcasts at the last plot are based on the tutorial material I am teaching for the MSc course titled ‘Intro to Big Data Analytics’ at KCL. In the two plots at the top, all the simplifications made in the course are dropped.&lt;/p>
 &lt;p>The dataset is made of 160 carefully selected mixed-frequency indicators, that are updated on a timely basis (i.e. every time the nowcasts are re-run). As such, the nowcasts reflect the information contained in the latest released economic and market data, as of the day of the estimation (which can be seen by hovering over the corresponding points in the plots). The mixed-frequency panel of predictors contains weekly, daily, and monthly indicators. The series that is nowcasted is the annualized MoM% headline CPI for the US (FRED mnemonic: &lt;a href="https://fred.stlouisfed.org/series/CPIAUCSL" target="_blank" rel="noopener">CPIAUCSL&lt;/a>).&lt;/p>
+&lt;p>Plot 1&lt;/p>
 &lt;iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ckara/73.embed">&lt;/iframe>
+&lt;p>Plot 2&lt;/p>
+&lt;iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ckara/85.embed">&lt;/iframe>
+&lt;p>Plot 3&lt;/p>
+&lt;iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~ckara/85.embed?show_link=false">&lt;/iframe>
 &lt;ul>
 &lt;li>Determinants of nowcasts:&lt;/li>
 &lt;/ul>
