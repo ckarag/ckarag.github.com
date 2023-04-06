@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-956874231" class="chart">&lt;/div>
+&lt;div id="chart-839621754" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-956874231', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-839621754', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -635,20 +635,14 @@ Create your slides in Markdown - click the &lt;em>Slides&lt;/em> button to check
 &lt;/ul></description></item><item><title>M$ \alpha $cro Monitor</title><link>https://ckarag.github.io/rtmonitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/rtmonitor/</guid><description>&lt;h3 id="us">US&lt;/h3>
 &lt;p>The Real-Time M$ \alpha $cro Monitor of
 $ \alpha $4casting uses state-of-the-art datasets and statistical models for macro nowcasting to monitor economic activity in real-time, specifically GDP and inflation.&lt;/p>
-&lt;ul>
-&lt;li>GDP and demand-side components&lt;/li>
-&lt;/ul>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/73.embed?show_link=false">&lt;/iframe>
-&lt;ul>
-&lt;li>CPI Inflation&lt;/li>
-&lt;/ul>
-&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/87.embed">&lt;/iframe>
+&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/87.embed?show_link=false">&lt;/iframe>
 &lt;ul>
 &lt;li>Visualizing the determinants of inflation nowcasts and how those have changed across time.&lt;/li>
 &lt;/ul>
 &lt;iframe
 src="https://ckarag.github.io/MLinterpret_CPI.gif"
-width="900"
+width="750"
 height="550"
 style="border:none;">
 &lt;/iframe>
