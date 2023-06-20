@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB 2020b"><title>The Real-Time Nowcasting Suite</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 28.8px; min-height: 0px; white-space: pre-wrap; color: rgb(213, 80, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: 400; text-align: left;  }
+.S1 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: left;  }
+.S2 { margin: 10px 0px 20px; padding-left: 0px; font-family: Helvetica, Arial, sans-serif; font-size: 14px;  }
+.S3 { margin-left: 56px; line-height: 21px; min-height: 0px; text-align: left; white-space: pre-wrap;  }
+.S4 { margin: 10px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 15px; font-weight: 700; text-align: left;  }</style></head><body><div class = rtcContent><h1  class = 'S0'><span>The Real-Time Nowcasting Suite</span></h1><div  class = 'S1'><span></span></div><div  class = 'S1'><span>The </span><span style=' font-weight: bold; font-style: italic;'>Real-Time Nowcasting Suite</span><span> is an extensive collection of uniformly designed MATLAB functions developed for pre-processing large sets of mixed-frequency data with missing observations at the bottom (ragged-edges) and tailored for nowcasting and forecasting economic indicators in real-time. ‘Real-time’ means that updated nowcasts and forecasts can be produced instantly whenever new relevant data are released, without the need to modify the code. This becomes possible because the functions in the Nowcasting Suite organize the time series in </span><span style=' font-style: italic;'>timetables </span><span>containing time-stamped rows, which is MATLAB’s data format that is equivalent to Python's </span><span style=' font-style: italic;'>dataframes</span><span>. In addition to producing instant/real-time forecasts and nowcasts, the Nowcasting Suite can also facilitate research through its ability to carry out more complicated pseudo out-of-sample (POOS) model evaluation exercises. Specifically, model evaluation can be conducted at a frequency higher than that of the target variable, which can be argued to be closer to the actual practise given the constant inflow of new information in the ‘Big Data’ era, and the need for continuous monitoring of the current and future states of the economy. Moreover, the functions in the Nowcasting Suite allow the distinction between lagging and leading information of the mixed-frequency indicators and can ‘follow’ each variable and its categorization within the model, facilitating the interpretability and allowing to establish a narrative for the projection by opening the black box (-when used in conjunction with statistical techniques that have feature selection capabilities). </span></div><div  class = 'S1'><span>Below are the descriptions of some of the functions included in the Nowcasting Suite.</span></div><div  class = 'S1'><span style=' font-weight: bold; font-family: monospace;'>StepsAhead4Nowcast()</span><span> finds the date that corresponds to the 'now' period and compares that to the period of the last available LHS observation. By doing so, the function identifies what is the appropriate 'h' (i.e. steps ahead) for the nowcast to be obtained, as oftentimes this can be h&gt;1. This implies that the user can then easily adjust 'h' to obtain the desired quarters/months-ahead forecast (instead of the nowcast). NB: One might argue that the appropriate 'h' can easily be set by </span><span style=' text-decoration: underline;'>measuring the number of missing values between the LHS and the last available value in the predictors’ matrix X</span><span>. The following example illustrates why a more involved function, like this one, is needed in a real-time forecasting setup. Assume that today is the morning of 1/1/2023 and we want to re-run the models to obtain the nowcasts using all the newly published information. Further assume that the LHS is a monthly indicator and is released with approximately 2 weeks of delay (similarly to the CPI). The last LHS observation is for 30/11/2022 (released on 14/12/2022) and the timeliest variable in the X matrix contains values up until 31/12/2022. In this case, there will only be </span><span style=' font-weight: bold;'>1 missing value</span><span> of the LHS to reach the last available period in the X matrix, but setting </span><span style=' font-weight: bold;'>h=1 will result in estimating the</span><span> </span><span style=' font-weight: bold;'>backcast</span><span> (i.e. predicting the value for 31/12/2022). However, ‘now’ we are already in January 2023, and therefore, </span><span style=' font-weight: bold;'>to obtain the nowcast, ‘h’ needs to be set to h=2</span><span>. Function </span><span style=' font-family: monospace;'>StepsAhead4Nowcast()</span><span> automatically finds the appropriate value that 'h' needs to be set to in order to obtain the nowcast (-call it 'h0'). Then, one can easily obtain the h-steps ahead forecast(s) by setting </span><span style=' font-style: italic;'>h_final = h0+h</span><span>.</span></div><div  class = 'S1'><span style=' font-weight: bold; font-family: monospace;'>LHStimeDummies</span><span style=' font-family: monospace;'>()</span><span style=' font-weight: bold;'> </span><span>automatically creates a set of controlling time-dummies corresponding to the periods in which the dependent variable takes extreme values, that one might want to control for. The time-dummies are constructed by first detecting irregular periods in a manner similar to the outlier detection and correction procedure used for the predictors’ matrix X (i.e. based on the IQR). This is done automatically for any target variable. By changing the threshold (-multiple of the IQR), the number of the desired controlling time-dummies can be altered. The function creates one time-dummy for each detected block of sequential observations labelled as extreme, and therefore, separate dummies are created for individual irregular periods. For instance, </span><span style=' font-family: monospace;'>LHStimeDummies() </span><span>will create separate time-dummies for the 2008 financial crisis, and for the COVID-19 pandemic, automatically. </span></div><div  class = 'S1'><span style=' font-weight: bold; font-family: monospace;'>SAtestNrun</span><span style=' font-family: monospace;'>()</span><span> performs testing for seasonality and seasonal adjustment using the X-13-ARIMA-SEATS seasonal adjustment procedure. The detection of seasonality has been automated by accessing and processing the outputted textual log files of the X-13-ARIMA-SEATS that contain the seasonality test results. The function is making use of the original executable from the US Census Bureau and allows to import different ‘spec’ files to implement the desired adjustment procedure. If seasonality testing finds a clear seasonality pattern, then the adjusted series is returned, otherwise the original is kept.</span><span>  </span></div><div  class = 'S1'><span style=' font-weight: bold; font-family: monospace;'>trans2I0</span><span style=' font-family: monospace;'>()</span><span> using iterative Unit Root testing, this function automatically defines the transformation for each of the predictors in the X matrix by selecting the number of differences that makes each of the series stationary. Specifically, the function implements the DFGLS test and selects the optimal lag-order of the underlying ADF regression (on the GLS de-trended time series) using either of the following:  </span></div><ul  class = 'S2'><li  class = 'S3'><span>Schwarz's Information Criterion (SIC)</span></li><li  class = 'S3'><span>Modified Akaike Information Criterion (MAIC) by Ng and Perron (2001)</span></li><li  class = 'S3'><span>Sequential t-test (Seq-t) by Ng and Perron (1995).</span></li></ul><div  class = 'S1'><span style=' font-weight: bold; font-family: monospace;'>outl_adj('IncludeUp2', ...)</span><span> performs outlier detection and adjustment based on the interquartile range (IQR) of each series. The detected outliers can be adjusted by either using the median, the rolling median, or can be set to missing. The missing observations can subsequently be filled using one of the available methods provided by function </span><span style=' font-family: monospace;'>MissFill()</span><span>. Optional input </span><span style=' font-family: monospace;'>'IncludeUp2'</span><span> has been added to account for the cases in which the forecaster might desire to detect and fix outliers in only part of the sample. For instance, it might be preferable to keep observations at the bottom of the sample intact, instead of truncating those (to the median or elsewise), as those last few rows are left outside the training set and are used to obtain the (actual or pseudo out-of-sample) prediction. When extreme economic conditions are around the corner, the abovementioned outlier correction strategy could contribute into better forecasting abrupt changes and turning points, especially when timely high-frequency indicators carry the corresponding signals. Since the forecaster is conditioning on these last few rows of observations to calculate the projection, conditioning on the actual extreme values/outliers (rather than the artificially truncated ones) could potentially provide added forecasting accuracy. Implementing outlier correction selectively into part of the sample, is a straightforward process when data at a single frequency (e.g. quarterly or monthly only) and with no ragged-edges are considered, as one can simply exclude the last few rows (-say the last 4 rows, if one considers 3 lags of each predictor in the X matrix) when passing the data into the outlier-adjustment function. However, when having data of mixed-frequencies which almost unavoidably contain ragged-edges, because the outlier-adjustment procedure is applied on the high-frequency indicators </span><span style=' text-decoration: underline;'>before</span><span> the MIDAS time-series lag operator has been applied (to obtain the balanced down-sampled/disaggregated information set), the implementation becomes more cumbersome. Because the Nowcasting Suite has been developed based on timetables, </span><span style=' font-family: monospace;'>'IncludeUp2'</span><span> conveniently takes a date as an argument. For example, setting the input to ‘31/12/2022’, would instruct the function to detect and adjust outliers only up to the end of December 2022, inclusive. </span></div><div  class = 'S1'><span style=' font-weight: bold; font-family: monospace;'>MissFill('FillUp2',…)</span><span> fills the missing values using either the expectation maximization (EM) algorithm ala Stock-Watson (2002), or predictions from univariate Autoregressive models (ala Bridge equations). Optional input </span><span style=' font-family: monospace;'>'FillUp2'</span><span> allows the user to select up to which period to fill the missing values. This means that one can avoid filling the ragged-edge of the predictors’ matrix, or one might select to only fill up to the period that corresponds to the latest observed LHS value (i.e., leaving any timely/leading information at the bottom, intact</span><span>, so that no added uncertainty is introduced in the projection</span><span>). Another use would be to fill the predictors matrix only up to the point in time that corresponds to the date that we want to predict (making the filling depend on the steps ahead the forecaster wants to predict, or in other words, making the filling ‘h-specific’). For instance, assume we are currently on the 26/2/2022 and that the timeliest of our predictors, the (monthly) Consumer Sentiment Index, which is usually released 4-5 days before the end of the reference month, has been released up to Feb-2022. Further assume that only the final (quarterly) GDP value for 2021Q3 is currently available, and that we are interested in the backcast (2021Q4; h=1). Since we are only interested in estimating the backcast, one might argue that the (monthly) predictors’ matrix need only to be filled using EM, up until Dec-2021. Whereas, when the nowcast (2022Q1; h=2) or the forecasts (h=3,4,8..) are to be predicted, we can then similarly allow the X matrix to be filled up to the last observation of our timeliest indicator (Feb-2022). </span><span style=' font-family: monospace;'>'FillUp2'</span><span> operates using a datetime input, similarly to optional input </span><span style=' font-family: monospace;'>'IncludeUp2'</span><span> in </span><span style=' font-family: monospace;'>outl_adj()</span><span>. As such, the user can specify the desired date up to which to fill the missing observation. If </span><span style=' font-family: monospace;'>'FillUp2'</span><span> is a vector of dates, then each series is filled up to a different period. </span></div><div  class = 'S1'><span style=' font-weight: bold; font-family: monospace;'>trans2MIDAS</span><span style=' font-family: monospace;'>() </span><span>organizes data of single- or mixed- (predictors/target) frequencies into leads/lags and by predictor. The data are organized in 3-dimensional arrays allowing to treat each variable and its leads/lags </span><span style=' font-weight: bold;'>as a group. </span><span>This feature is primarily useful in many contemporary machine learning time-series methodologies that treat covariates and their lags/leads as blocks (instead of individual components), such as Sparse Group-Lasso and Block L2-Boosting, among others. Optional inputs allow the researcher to choose between two methods for extracting the leads &amp; lags for each variable: (1) The standard method of extracting in total </span><span style=' font-weight: bold;'>V leads + lags</span><span> (i.e. applying the time-series operator to obtain the first V lagged series of the high-frequency covariate); (2) Considering </span><span style=' font-weight: bold;'>ALL leads + V lags</span><span>, ala Andreou, Ghysels and Kourtellos (2013, JBES). The latter (-AKG2013) method could be argued to be preferable, compared to the standard method of creating the MIDAS conditioning set, for the following reasons: </span></div><ol  class = 'S2'><li  class = 'S3'><span>If for an Xi we have many leads, using the first method might result in including little or NO lagged information at all, for that Xi.</span></li><li  class = 'S3'><span>The latter method ensures that the lagging information is </span><span style=' font-weight: bold;'>the same</span><span> for all the X's, meaning that it covers the exact same period, past the last available LHS observation. For instance, assuming a quarterly-monthly mix, 1 quarter of past monthly information (prior to the last observed LHS) will be included if we set V=3, an entire year if V=12, two years if V=24 etc. To illustrate this point, let’s assume that the target variable's last observed value corresponds to Q4 (i.e., 31st Dec 2022). Also, say that for X1 we have 0 leads (i.e., last observed value for X1 is in 31/12/2022), while for X2 we have 5 leading months, meaning that we have 5 monthly observations ahead of the last observed LHS value (i.e., last observed value for X2 is in 31/5/2023). Extracting the last V=12 leads/lags (using the standard method) will have a year's worth of information for both X1 and X2, but only for X1 that information will correspond to the entire last year of the LHS variable.</span></li></ol><div  class = 'S1'><span>From a modelling perspective separating leads and lags allows the forecaster to experiment with different structures of the MIDAS polynomials. For example, assuming that we have predictors at monthly and daily frequency (and a quarterly target), one might consider adding to the same model a restricted lead and lag (e.g. Almon) polynomial for the daily indicator to ensure parsimony, and an unrestricted polynomial for the leads of the monthly indicator, while excluding any monthly lags altogether. Furthermore, being able to distinguish between what comprises leading and what lagging information allows us to see whether potential forecasting gains are due to timely information flowing into the model or if it's just the outcome of flexibility in the temporal-aggregation functions that summarize the lagged information.</span></div><div  class = 'S1'><span style=' font-weight: bold; font-family: monospace;'>trans2MIDASLegendre</span><span style=' font-family: monospace;'>()</span><span> works in the same manner as </span><span style=' font-weight: bold; font-family: monospace;'>trans2MIDAS</span><span style=' font-family: monospace;'>()</span><span>, but employs the newly introduced MIDAS-Legendre polynomials further reducing the dimensionality of covariates, while also adding all the benefits of having orthogonal covariates. Finally, the two functions also synchronize/align the different conditioning variables (X,D,LY) to each other, and to the target variable (y), so that they correspond to the appropriate periods for the estimation of the (direct-forecasting) model producing the desired h-steps ahead forecast. </span></div><div  class = 'S1'><span style=' font-weight: bold; font-family: monospace;'>flatify</span><span style=' font-family: monospace;'>() </span><span>Once the leads/lags have been extracted and everything has been grouped by predictor and organized into 3-dimensional matrices using</span><span style=' font-family: monospace;'> trans2MIDAS()</span><span> and </span><span style=' font-family: monospace;'>trans2MIDASLegendre()</span><span>, this function allows to flatten and merge everything into a single 2D matrix </span><span style=' font-weight: bold;'>WHILE keeping track of what each column/variable of the 2D matrix</span><span> corresponds to. Specifically, one can distinguish if each column corresponds to LY/D/F/X, and to lead/lag of X/F, as well as which specific factor and X. For example, the forecaster can see that the 278</span><span>th</span><span> column corresponds to the 2</span><span>nd</span><span> lead of predictor X132, as well as the category this predictor falls into, i.e., sentiment indicators, prices and so on. This traceability feature of the functions of the Nowcasting Suite allows to keep track of the variables selected in any Machine Learning model with variable/feature selection capabilities, contributing to improved interpretability by opening the black box. This allows the researcher to </span><span>establish a narrative for the projection,</span><span> including the extent to which the resulted forecast has been formed on leading or lagging information, as well as the main economic categories that the selected predictors fall into. The resulted numerical arrays are properly aligned and ready to be passed to any estimation method of choice. The last row of that numerical 2D array is then kept aside to be used to calculate the projection, while the remaining rows are used as the training sample. </span></div><div  class = 'S1'><span>Another crucial feature of the functions of the Nowcasting Suite is that they are able to </span><span style=' text-decoration: underline;'>distinguish the position of missing values</span><span> in the time series. Specifically, they detect whether the missing values are at the </span><span style=' font-weight: bold;'>top</span><span>,</span><span style=' font-weight: bold;'> middle </span><span>or</span><span style=' font-weight: bold;'> bottom</span><span> of each series, and they label them accordingly. This feature is primarily important as is allows to accommodate the ragged-edge nature inherent in the nowcasting/forecasting setup of economic timeseries, especially when real-time implementation is the objective. The detection of the position of the missing values is achieved using internal function </span><span style=' font-weight: bold; font-family: monospace;'>missingEndValues2</span><span style=' font-family: monospace;'>()</span><span>.</span></div><div  class = 'S1'><span style=' font-weight: bold; font-family: monospace;'>Downsample()</span><span> allows the forecaster to apply different </span><span style=' font-weight: bold;'>temporal-aggregation schemes</span><span> when down-sampling indicators, that is, when converting a high-frequency time series, such as monthly, to its low-frequency counterpart e.g. quarterly. The time-aggregation function can be allowed to vary depending on each variable’s transformation (levels, 1st differences, 2nd difference etc.), as well as its economic-type (stock or flow). For instance, a monthly flow variable stored in the dataset as first differences of logged values (MoM%), is automatically converted into quarterly (QoQ%) by applying weights (1,2,3,2,1)/3, as long as the inputs passed into </span><span style=' font-family: monospace;'>Downsample()</span><span> specify the appropriate initial transformation (1</span><span>st</span><span> diffs) and type (flow) of the indicator to be temporally-aggregated. Moreover, following the literature on Bridge Equations, the observations of the high frequency series corresponding to each distinct period of the low sampling frequency, must be all available in order to be able to temporally aggregate. Specifically, the rule for converting from monthly to quarterly in Bridge Equation models, is to aggregate only the quarters for which all 3 monthly observations are available. This function allows the researcher to choose between ‘</span><span style=' font-weight: bold;'>complete’ (ala Bridge) </span><span>or ‘</span><span style=' font-weight: bold;'>crooked’ temporal-aggregation </span><span>(regardless of whether the time-aggregation function is the mean, the last period, or the summation). The latter configuration (‘crooked’) allows the non-complete periods to also be aggregated using any data that are available for each series, up to the point that those are available.</span></div><div  class = 'S1'><span></span></div><h4  class = 'S4'><span>References</span></h4><div  class = 'S1'><span>Andreou E., Ghysels E., and Kourtellos A., (2013) "Should Macroeconomic Forecasters Use Daily Financial Data and How?", </span><span style=' font-style: italic;'>Journal of Business &amp; Economic Statistics</span><span>, 31(2): 240-251.</span></div><div  class = 'S1'><span>Elliott, G. R., Rothenberg, T. J. and Stock J. H., (1996) "Efficient tests for an autoregressive unit root", </span><span style=' font-style: italic;'>Econometrica</span><span> 64: 813–836. </span></div><div  class = 'S1'><span>Ng, S. and Perron, P., (1995) "Unit Root Tests in ARMA Models with Data Dependent Methods for the Selection of the Truncation Lag", </span><span style=' font-style: italic;'>Journal of the American Statistical Association</span><span>, 90: 268-281.</span></div><div  class = 'S1'><span>Ng, S. and Perron, P., (2001) "Lag Length Selection and the Construction of Unit Root Tests with Good Size and Power", </span><span style=' font-style: italic;'>Econometrica</span><span>, 69: 1519-1554.</span></div><div  class = 'S1'><span>Stock, J. H., and Watson, M. W., (2002) "Macroeconomic forecasting using diffusion indexes." </span><span style=' font-style: italic;'>Journal of Business &amp; Economic Statistics</span><span>, </span><span style=' font-style: italic;'>20</span><span>(2): 147-162.</span></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+%% The Real-Time Nowcasting Suite
+% 
+% 
+% The _*Real-Time Nowcasting Suite*_ is an extensive collection of uniformly 
+% designed MATLAB functions developed for pre-processing large sets of mixed-frequency 
+% data with missing observations at the bottom (ragged-edges) and tailored for 
+% nowcasting and forecasting economic indicators in real-time. ‘Real-time’ means 
+% that updated nowcasts and forecasts can be produced instantly whenever new relevant 
+% data are released, without the need to modify the code. This becomes possible 
+% because the functions in the Nowcasting Suite organize the time series in _timetables_ 
+% containing time-stamped rows, which is MATLAB’s data format that is equivalent 
+% to Python's _dataframes_. In addition to producing instant/real-time forecasts 
+% and nowcasts, the Nowcasting Suite can also facilitate research through its 
+% ability to carry out more complicated pseudo out-of-sample (POOS) model evaluation 
+% exercises. Specifically, model evaluation can be conducted at a frequency higher 
+% than that of the target variable, which can be argued to be closer to the actual 
+% practise given the constant inflow of new information in the ‘Big Data’ era, 
+% and the need for continuous monitoring of the current and future states of the 
+% economy. Moreover, the functions in the Nowcasting Suite allow the distinction 
+% between lagging and leading information of the mixed-frequency indicators and 
+% can ‘follow’ each variable and its categorization within the model, facilitating 
+% the interpretability and allowing to establish a narrative for the projection 
+% by opening the black box (-when used in conjunction with statistical techniques 
+% that have feature selection capabilities). 
+% 
+% Below are the descriptions of some of the functions included in the Nowcasting 
+% Suite.
+% 
+% |*StepsAhead4Nowcast()*| finds the date that corresponds to the 'now' period 
+% and compares that to the period of the last available LHS observation. By doing 
+% so, the function identifies what is the appropriate 'h' (i.e. steps ahead) for 
+% the nowcast to be obtained, as oftentimes this can be h>1. This implies that 
+% the user can then easily adjust 'h' to obtain the desired quarters/months-ahead 
+% forecast (instead of the nowcast). NB: One might argue that the appropriate 
+% 'h' can easily be set by measuring the number of missing values between the 
+% LHS and the last available value in the predictors’ matrix X. The following 
+% example illustrates why a more involved function, like this one, is needed in 
+% a real-time forecasting setup. Assume that today is the morning of 1/1/2023 
+% and we want to re-run the models to obtain the nowcasts using all the newly 
+% published information. Further assume that the LHS is a monthly indicator and 
+% is released with approximately 2 weeks of delay (similarly to the CPI). The 
+% last LHS observation is for 30/11/2022 (released on 14/12/2022) and the timeliest 
+% variable in the X matrix contains values up until 31/12/2022. In this case, 
+% there will only be *1 missing value* of the LHS to reach the last available 
+% period in the X matrix, but setting *h=1 will result in estimating the* *backcast* 
+% (i.e. predicting the value for 31/12/2022). However, ‘now’ we are already in 
+% January 2023, and therefore, *to obtain the nowcast, ‘h’ needs to be set to 
+% h=2*. Function |StepsAhead4Nowcast()| automatically finds the appropriate value 
+% that 'h' needs to be set to in order to obtain the nowcast (-call it 'h0'). 
+% Then, one can easily obtain the h-steps ahead forecast(s) by setting _h_final 
+% = h0+h_.
+% 
+% |*LHStimeDummies*()| automatically creates a set of controlling time-dummies 
+% corresponding to the periods in which the dependent variable takes extreme values, 
+% that one might want to control for. The time-dummies are constructed by first 
+% detecting irregular periods in a manner similar to the outlier detection and 
+% correction procedure used for the predictors’ matrix X (i.e. based on the IQR). 
+% This is done automatically for any target variable. By changing the threshold 
+% (-multiple of the IQR), the number of the desired controlling time-dummies can 
+% be altered. The function creates one time-dummy for each detected block of sequential 
+% observations labelled as extreme, and therefore, separate dummies are created 
+% for individual irregular periods. For instance, |LHStimeDummies()| will create 
+% separate time-dummies for the 2008 financial crisis, and for the COVID-19 pandemic, 
+% automatically. 
+% 
+% |*SAtestNrun*()| performs testing for seasonality and seasonal adjustment 
+% using the X-13-ARIMA-SEATS seasonal adjustment procedure. The detection of seasonality 
+% has been automated by accessing and processing the outputted textual log files 
+% of the X-13-ARIMA-SEATS that contain the seasonality test results. The function 
+% is making use of the original executable from the US Census Bureau and allows 
+% to import different ‘spec’ files to implement the desired adjustment procedure. 
+% If seasonality testing finds a clear seasonality pattern, then the adjusted 
+% series is returned, otherwise the original is kept.  
+% 
+% |*trans2I0*()| using iterative Unit Root testing, this function automatically 
+% defines the transformation for each of the predictors in the X matrix by selecting 
+% the number of differences that makes each of the series stationary. Specifically, 
+% the function implements the DFGLS test and selects the optimal lag-order of 
+% the underlying ADF regression (on the GLS de-trended time series) using either 
+% of the following:  
+%% 
+% * Schwarz's Information Criterion (SIC)
+% * Modified Akaike Information Criterion (MAIC) by Ng and Perron (2001)
+% * Sequential t-test (Seq-t) by Ng and Perron (1995).
+%% 
+% |*outl_adj('IncludeUp2', ...)*| performs outlier detection and adjustment 
+% based on the interquartile range (IQR) of each series. The detected outliers 
+% can be adjusted by either using the median, the rolling median, or can be set 
+% to missing. The missing observations can subsequently be filled using one of 
+% the available methods provided by function |MissFill()|. Optional input |'IncludeUp2'| 
+% has been added to account for the cases in which the forecaster might desire 
+% to detect and fix outliers in only part of the sample. For instance, it might 
+% be preferable to keep observations at the bottom of the sample intact, instead 
+% of truncating those (to the median or elsewise), as those last few rows are 
+% left outside the training set and are used to obtain the (actual or pseudo out-of-sample) 
+% prediction. When extreme economic conditions are around the corner, the abovementioned 
+% outlier correction strategy could contribute into better forecasting abrupt 
+% changes and turning points, especially when timely high-frequency indicators 
+% carry the corresponding signals. Since the forecaster is conditioning on these 
+% last few rows of observations to calculate the projection, conditioning on the 
+% actual extreme values/outliers (rather than the artificially truncated ones) 
+% could potentially provide added forecasting accuracy. Implementing outlier correction 
+% selectively into part of the sample, is a straightforward process when data 
+% at a single frequency (e.g. quarterly or monthly only) and with no ragged-edges 
+% are considered, as one can simply exclude the last few rows (-say the last 4 
+% rows, if one considers 3 lags of each predictor in the X matrix) when passing 
+% the data into the outlier-adjustment function. However, when having data of 
+% mixed-frequencies which almost unavoidably contain ragged-edges, because the 
+% outlier-adjustment procedure is applied on the high-frequency indicators before 
+% the MIDAS time-series lag operator has been applied (to obtain the balanced 
+% down-sampled/disaggregated information set), the implementation becomes more 
+% cumbersome. Because the Nowcasting Suite has been developed based on timetables, 
+% |'IncludeUp2'| conveniently takes a date as an argument. For example, setting 
+% the input to ‘31/12/2022’, would instruct the function to detect and adjust 
+% outliers only up to the end of December 2022, inclusive. 
+% 
+% |*MissFill('FillUp2',…)*| fills the missing values using either the expectation 
+% maximization (EM) algorithm ala Stock-Watson (2002), or predictions from univariate 
+% Autoregressive models (ala Bridge equations). Optional input |'FillUp2'| allows 
+% the user to select up to which period to fill the missing values. This means 
+% that one can avoid filling the ragged-edge of the predictors’ matrix, or one 
+% might select to only fill up to the period that corresponds to the latest observed 
+% LHS value (i.e., leaving any timely/leading information at the bottom, intact, 
+% so that no added uncertainty is introduced in the projection). Another use would 
+% be to fill the predictors matrix only up to the point in time that corresponds 
+% to the date that we want to predict (making the filling depend on the steps 
+% ahead the forecaster wants to predict, or in other words, making the filling 
+% ‘h-specific’). For instance, assume we are currently on the 26/2/2022 and that 
+% the timeliest of our predictors, the (monthly) Consumer Sentiment Index, which 
+% is usually released 4-5 days before the end of the reference month, has been 
+% released up to Feb-2022. Further assume that only the final (quarterly) GDP 
+% value for 2021Q3 is currently available, and that we are interested in the backcast 
+% (2021Q4; h=1). Since we are only interested in estimating the backcast, one 
+% might argue that the (monthly) predictors’ matrix need only to be filled using 
+% EM, up until Dec-2021. Whereas, when the nowcast (2022Q1; h=2) or the forecasts 
+% (h=3,4,8..) are to be predicted, we can then similarly allow the X matrix to 
+% be filled up to the last observation of our timeliest indicator (Feb-2022). 
+% |'FillUp2'| operates using a datetime input, similarly to optional input |'IncludeUp2'| 
+% in |outl_adj()|. As such, the user can specify the desired date up to which 
+% to fill the missing observation. If |'FillUp2'| is a vector of dates, then each 
+% series is filled up to a different period. 
+% 
+% |*trans2MIDAS*()| organizes data of single- or mixed- (predictors/target) 
+% frequencies into leads/lags and by predictor. The data are organized in 3-dimensional 
+% arrays allowing to treat each variable and its leads/lags *as a group.* This 
+% feature is primarily useful in many contemporary machine learning time-series 
+% methodologies that treat covariates and their lags/leads as blocks (instead 
+% of individual components), such as Sparse Group-Lasso and Block L2-Boosting, 
+% among others. Optional inputs allow the researcher to choose between two methods 
+% for extracting the leads & lags for each variable: (1) The standard method of 
+% extracting in total *V leads + lags* (i.e. applying the time-series operator 
+% to obtain the first V lagged series of the high-frequency covariate); (2) Considering 
+% *ALL leads + V lags*, ala Andreou, Ghysels and Kourtellos (2013, JBES). The 
+% latter (-AKG2013) method could be argued to be preferable, compared to the standard 
+% method of creating the MIDAS conditioning set, for the following reasons: 
+%% 
+% # If for an Xi we have many leads, using the first method might result in 
+% including little or NO lagged information at all, for that Xi.
+% # The latter method ensures that the lagging information is *the same* for 
+% all the X's, meaning that it covers the exact same period, past the last available 
+% LHS observation. For instance, assuming a quarterly-monthly mix, 1 quarter of 
+% past monthly information (prior to the last observed LHS) will be included if 
+% we set V=3, an entire year if V=12, two years if V=24 etc. To illustrate this 
+% point, let’s assume that the target variable's last observed value corresponds 
+% to Q4 (i.e., 31st Dec 2022). Also, say that for X1 we have 0 leads (i.e., last 
+% observed value for X1 is in 31/12/2022), while for X2 we have 5 leading months, 
+% meaning that we have 5 monthly observations ahead of the last observed LHS value 
+% (i.e., last observed value for X2 is in 31/5/2023). Extracting the last V=12 
+% leads/lags (using the standard method) will have a year's worth of information 
+% for both X1 and X2, but only for X1 that information will correspond to the 
+% entire last year of the LHS variable.
+%% 
+% From a modelling perspective separating leads and lags allows the forecaster 
+% to experiment with different structures of the MIDAS polynomials. For example, 
+% assuming that we have predictors at monthly and daily frequency (and a quarterly 
+% target), one might consider adding to the same model a restricted lead and lag 
+% (e.g. Almon) polynomial for the daily indicator to ensure parsimony, and an 
+% unrestricted polynomial for the leads of the monthly indicator, while excluding 
+% any monthly lags altogether. Furthermore, being able to distinguish between 
+% what comprises leading and what lagging information allows us to see whether 
+% potential forecasting gains are due to timely information flowing into the model 
+% or if it's just the outcome of flexibility in the temporal-aggregation functions 
+% that summarize the lagged information.
+% 
+% |*trans2MIDASLegendre*()| works in the same manner as |*trans2MIDAS*()|, but 
+% employs the newly introduced MIDAS-Legendre polynomials further reducing the 
+% dimensionality of covariates, while also adding all the benefits of having orthogonal 
+% covariates. Finally, the two functions also synchronize/align the different 
+% conditioning variables (X,D,LY) to each other, and to the target variable (y), 
+% so that they correspond to the appropriate periods for the estimation of the 
+% (direct-forecasting) model producing the desired h-steps ahead forecast. 
+% 
+% |*flatify*()| Once the leads/lags have been extracted and everything has been 
+% grouped by predictor and organized into 3-dimensional matrices using |trans2MIDAS()| 
+% and |trans2MIDASLegendre()|, this function allows to flatten and merge everything 
+% into a single 2D matrix *WHILE keeping track of what each column/variable of 
+% the 2D matrix* corresponds to. Specifically, one can distinguish if each column 
+% corresponds to LY/D/F/X, and to lead/lag of X/F, as well as which specific factor 
+% and X. For example, the forecaster can see that the 278th column corresponds 
+% to the 2nd lead of predictor X132, as well as the category this predictor falls 
+% into, i.e., sentiment indicators, prices and so on. This traceability feature 
+% of the functions of the Nowcasting Suite allows to keep track of the variables 
+% selected in any Machine Learning model with variable/feature selection capabilities, 
+% contributing to improved interpretability by opening the black box. This allows 
+% the researcher to establish a narrative for the projection, including the extent 
+% to which the resulted forecast has been formed on leading or lagging information, 
+% as well as the main economic categories that the selected predictors fall into. 
+% The resulted numerical arrays are properly aligned and ready to be passed to 
+% any estimation method of choice. The last row of that numerical 2D array is 
+% then kept aside to be used to calculate the projection, while the remaining 
+% rows are used as the training sample. 
+% 
+% Another crucial feature of the functions of the Nowcasting Suite is that they 
+% are able to distinguish the position of missing values in the time series. Specifically, 
+% they detect whether the missing values are at the *top*, *middle* or *bottom* 
+% of each series, and they label them accordingly. This feature is primarily important 
+% as is allows to accommodate the ragged-edge nature inherent in the nowcasting/forecasting 
+% setup of economic timeseries, especially when real-time implementation is the 
+% objective. The detection of the position of the missing values is achieved using 
+% internal function |*missingEndValues2*()|.
+% 
+% |*Downsample()*| allows the forecaster to apply different *temporal-aggregation 
+% schemes* when down-sampling indicators, that is, when converting a high-frequency 
+% time series, such as monthly, to its low-frequency counterpart e.g. quarterly. 
+% The time-aggregation function can be allowed to vary depending on each variable’s 
+% transformation (levels, 1st differences, 2nd difference etc.), as well as its 
+% economic-type (stock or flow). For instance, a monthly flow variable stored 
+% in the dataset as first differences of logged values (MoM%), is automatically 
+% converted into quarterly (QoQ%) by applying weights (1,2,3,2,1)/3, as long as 
+% the inputs passed into |Downsample()| specify the appropriate initial transformation 
+% (1st diffs) and type (flow) of the indicator to be temporally-aggregated. Moreover, 
+% following the literature on Bridge Equations, the observations of the high frequency 
+% series corresponding to each distinct period of the low sampling frequency, 
+% must be all available in order to be able to temporally aggregate. Specifically, 
+% the rule for converting from monthly to quarterly in Bridge Equation models, 
+% is to aggregate only the quarters for which all 3 monthly observations are available. 
+% This function allows the researcher to choose between ‘*complete’ (ala Bridge)* 
+% or ‘*crooked’ temporal-aggregation* (regardless of whether the time-aggregation 
+% function is the mean, the last period, or the summation). The latter configuration 
+% (‘crooked’) allows the non-complete periods to also be aggregated using any 
+% data that are available for each series, up to the point that those are available.
+% 
+% 
+% References
+% Andreou E., Ghysels E., and Kourtellos A., (2013) "Should Macroeconomic Forecasters 
+% Use Daily Financial Data and How?", _Journal of Business & Economic Statistics_, 
+% 31(2): 240-251.
+% 
+% Elliott, G. R., Rothenberg, T. J. and Stock J. H., (1996) "Efficient tests 
+% for an autoregressive unit root", _Econometrica_ 64: 813–836. 
+% 
+% Ng, S. and Perron, P., (1995) "Unit Root Tests in ARMA Models with Data Dependent 
+% Methods for the Selection of the Truncation Lag", _Journal of the American Statistical 
+% Association_, 90: 268-281.
+% 
+% Ng, S. and Perron, P., (2001) "Lag Length Selection and the Construction of 
+% Unit Root Tests with Good Size and Power", _Econometrica_, 69: 1519-1554.
+% 
+% Stock, J. H., and Watson, M. W., (2002) "Macroeconomic forecasting using diffusion 
+% indexes." _Journal of Business & Economic Statistics_, _20_(2): 147-162.
+##### SOURCE END #####
+--></body></html>
