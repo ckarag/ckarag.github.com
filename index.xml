@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-654271398" class="chart">&lt;/div>
+&lt;div id="chart-793682451" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-654271398', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-793682451', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -637,21 +637,12 @@ An extensive collection of uniformly designed MATLAB functions developed for pre
 &lt;p>&lt;em>[MATLAB] Collaborator to the MIDAS-ML (MIDAS Sparse-Group LASSO) Package by &lt;a href="https://jstriaukas.github.io/" target="_blank" rel="noopener">Jonas Striaukas&lt;/a>&lt;/em>&lt;br>
 &lt;a href="https://github.com/jstriaukas/midasml_mat" target="_blank" rel="noopener">Download&lt;/a>&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>M$ \alpha $cro Monitor</title><link>https://ckarag.github.io/rtmonitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/rtmonitor/</guid><description>&lt;p>Our
-$ \alpha $4casting Real-Time M$ \alpha $cro Monitor uses state-of-the-art datasets and statistical models for macro nowcasting that allowing us to monitor economic activity in real-time. The predictive and pre-processing models used to produce our nowcasts and forecasts, have been published in top academic journals (JBES, Econometrica to name a few) and are evaluated frequently against their competing alternatives to guarantee leading preformance.&lt;/p>
+&lt;/ul></description></item><item><title>M$ \alpha $cro Monitor</title><link>https://ckarag.github.io/rtmonitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/rtmonitor/</guid><description>&lt;p>The
+$ \alpha $4casting real-time M$ \alpha $cro Monitor uses state-of-the-art datasets and statistical models developed exclusively for macroeconomic nowcasting, allowing to closely and accurately monitor economic activity in real-time. The predictive and pre-processing models used to produce our nowcasts and forecasts, follow research that has been published in top academic journals (JBES, Econometrica to name a few) following the scientific developments in predictive macro modelling of the last couple of years. Our models are evaluated frequently against their competing alternatives to guarantee leading preformance among the industry.&lt;/p>
 &lt;h3 id="us">US&lt;/h3>
-&lt;p>Subscribed members can access the latest nowcasts and forecasts as well as the full history, &lt;a href="https://ckarag.github.io/uploads/US_m01_d0.xlsx" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;p>Subscribed members can access the spreadsheets containing the latest nowcasts and forecasts as well as the full history of the projections &lt;a href="https://ckarag.github.io/uploads/US_m01_d0.xlsx" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/73.embed?show_link=false">&lt;/iframe>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/87.embed?show_link=false">&lt;/iframe>
-&lt;ul>
-&lt;li>Visualizing the determinants of inflation nowcasts and how those have changed across time.&lt;/li>
-&lt;/ul>
-&lt;iframe
-src="https://ckarag.github.io/MLinterpret_CPI.gif"
-width="800"
-height="550"
-style="border:none;">
-&lt;/iframe>
 &lt;ul>
 &lt;li>
 &lt;p>Latest Nowcasts and Forecasts
@@ -681,7 +672,17 @@ style="border:none;">
 &lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Performance evaluation exercise of in-house ML methodologies.
+&lt;p>Visualizing the determinants of inflation nowcasts and how those have changed across time.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;iframe
+src="https://ckarag.github.io/MLinterpret_CPI.gif"
+width="800"
+height="550"
+style="border:none;">
+&lt;/iframe>
+&lt;ul>
+&lt;li>Performance evaluation exercise of in-house ML methodologies.
 &lt;table class="table">
 &lt;tr> &lt;th>﻿Models&lt;/th> &lt;th>h=0&lt;/th> &lt;th>h=1&lt;/th> &lt;th>h=2&lt;/th> &lt;th>h=3&lt;/th> &lt;th>h=4&lt;/th> &lt;th>&lt;/th> &lt;th>Execution Time (in ms)&lt;/th> &lt;/tr>
 &lt;tr>
@@ -1046,7 +1047,6 @@ style="border:none;">
 &lt;/tr>
 &lt;caption>Table: ML Results&lt;/caption>
 &lt;/table>
-&lt;/p>
 &lt;/li>
 &lt;/ul></description></item><item><title>Macro Nowcasting</title><link>https://ckarag.github.io/sota/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/sota/</guid><description>&lt;h3 id="nowcasting-with-state-of-the-art-methodologies">Nowcasting with State-of-the-Art Methodologies&lt;/h3>
 &lt;p>The purpose of the nowcasts in this section is not to give a single number, rather it is to give an indication of how well the latest research published in top academic journals, and highly cited methodologies for nowcasting, perform on a real-time basis.&lt;/p>
