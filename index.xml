@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-793682451" class="chart">&lt;/div>
+&lt;div id="chart-317485926" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-793682451', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-317485926', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -638,41 +638,46 @@ An extensive collection of uniformly designed MATLAB functions developed for pre
 &lt;a href="https://github.com/jstriaukas/midasml_mat" target="_blank" rel="noopener">Download&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ul></description></item><item><title>M$ \alpha $cro Monitor</title><link>https://ckarag.github.io/rtmonitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/rtmonitor/</guid><description>&lt;p>The
-$ \alpha $4casting real-time M$ \alpha $cro Monitor uses state-of-the-art datasets and statistical models developed exclusively for macroeconomic nowcasting, allowing to closely and accurately monitor economic activity in real-time. The predictive and pre-processing models used to produce our nowcasts and forecasts, follow research that has been published in top academic journals (JBES, Econometrica to name a few) following the scientific developments in predictive macro modelling of the last couple of years. Our models are evaluated frequently against their competing alternatives to guarantee leading preformance among the industry.&lt;/p>
+$ \alpha $4casting real-time M$ \alpha $cro Monitor uses state-of-the-art datasets and statistical models developed exclusively for macroeconomic nowcasting, allowing to closely and accurately monitor economic activity in real-time. The predictive and pre-processing models used to produce our nowcasts and forecasts, follow research that has been published in top academic journals (JBES, Econometrica to name a few) following the scientific developments in predictive macro modelling of the last couple of years. Our models are evaluated frequently against their competing alternatives to guarantee leading preformance among the industry.
+The Macro Monitor avoids human judgment by operating entirely on a large pool of data released by official sources. It is fully automated and the predictions are continuously updated in real-time as soon as new data releases become available, allowing to incorporate the latest market and economic developments, hence providing the most up-to-date views for the current and future states of the economies being monitored.&lt;/p>
 &lt;h3 id="us">US&lt;/h3>
-&lt;p>Subscribed members can access the spreadsheets containing the latest nowcasts and forecasts as well as the full history of the projections &lt;a href="https://ckarag.github.io/uploads/US_m01_d0.xlsx" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;p>Members subscribed to the newsletter can access the spreadsheets containing the latest nowcasts and forecasts as well as the full history of the projections &lt;a href="https://ckarag.github.io/uploads/US_m01_d0.xlsx" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/73.embed?show_link=false">&lt;/iframe>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/87.embed?show_link=false">&lt;/iframe>
 &lt;ul>
 &lt;li>
 &lt;p>Latest Nowcasts and Forecasts
 &lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>2023Q2&lt;/th> &lt;th>2023Q3&lt;/th> &lt;/tr>
+&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>2023Q3&lt;/th> &lt;th>2023Q4&lt;/th> &lt;th>2024Q1&lt;/th> &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">24/03/2023&lt;/td>
-&lt;td data-table-dtype="number">6&lt;/td>
+&lt;td data-table-dtype="text">08/12/2023&lt;/td>
+&lt;td data-table-dtype="text">4.9&lt;/td>
+&lt;td data-table-dtype="text">-1.05&lt;/td>
+&lt;td data-table-dtype="text">-0.69&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">15/12/2023&lt;/td>
+&lt;td data-table-dtype="text">4.91&lt;/td>
+&lt;td data-table-dtype="text">-1.18&lt;/td>
+&lt;td data-table-dtype="text">-0.18&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">22/12/2023&lt;/td>
 &lt;td data-table-dtype="text">&lt;/td>
+&lt;td data-table-dtype="text">1.74&lt;/td>
+&lt;td data-table-dtype="text">-6.31&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">31/03/2023&lt;/td>
+&lt;td data-table-dtype="text">29/12/2023&lt;/td>
 &lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="number">24&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">07/04/2023&lt;/td>
-&lt;td data-table-dtype="text">216.2&lt;/td>
-&lt;td data-table-dtype="number">21&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">14/04/2023&lt;/td>
-&lt;td data-table-dtype="text">2.88&lt;/td>
-&lt;td data-table-dtype="number">42&lt;/td>
+&lt;td data-table-dtype="text">1.6&lt;/td>
+&lt;td data-table-dtype="text">-5.89&lt;/td>
 &lt;/tr>
 &lt;/table>
 &lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Visualizing the determinants of inflation nowcasts and how those have changed across time.&lt;/p>
+&lt;p>Visualizing the determinants of nowcasts and how those have changed across time.&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;iframe
