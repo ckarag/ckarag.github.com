@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-317485926" class="chart">&lt;/div>
+&lt;div id="chart-825764193" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-317485926', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-825764193', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -648,30 +648,30 @@ The Macro Monitor avoids human judgment by operating entirely on a large pool of
 &lt;li>
 &lt;p>Latest Nowcasts and Forecasts
 &lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>2023Q3&lt;/th> &lt;th>2023Q4&lt;/th> &lt;th>2024Q1&lt;/th> &lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">08/12/2023&lt;/td>
-&lt;td data-table-dtype="text">4.9&lt;/td>
-&lt;td data-table-dtype="text">-1.05&lt;/td>
-&lt;td data-table-dtype="text">-0.69&lt;/td>
-&lt;/tr>
+&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>2023Q4&lt;/th> &lt;th>2024Q1&lt;/th> &lt;th>2024Q2&lt;/th> &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">15/12/2023&lt;/td>
-&lt;td data-table-dtype="text">4.91&lt;/td>
 &lt;td data-table-dtype="text">-1.18&lt;/td>
 &lt;td data-table-dtype="text">-0.18&lt;/td>
+&lt;td data-table-dtype="text">-3.41&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">22/12/2023&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
 &lt;td data-table-dtype="text">1.74&lt;/td>
 &lt;td data-table-dtype="text">-6.31&lt;/td>
+&lt;td data-table-dtype="text">-6.97&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">29/12/2023&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
 &lt;td data-table-dtype="text">1.6&lt;/td>
 &lt;td data-table-dtype="text">-5.89&lt;/td>
+&lt;td data-table-dtype="text">-6.37&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">05/01/2024&lt;/td>
+&lt;td data-table-dtype="text">1.98&lt;/td>
+&lt;td data-table-dtype="text">-6.83&lt;/td>
+&lt;td data-table-dtype="text">-2.9&lt;/td>
 &lt;/tr>
 &lt;/table>
 &lt;/p>
