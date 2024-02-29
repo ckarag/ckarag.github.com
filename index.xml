@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-831695742" class="chart">&lt;/div>
+&lt;div id="chart-914378256" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-831695742', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-914378256', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -836,209 +836,6 @@ The Macro Monitor avoids human judgment by operating entirely on a large pool of
 &lt;td data-table-dtype="text">3.74&lt;/td>
 &lt;/tr>
 &lt;caption>US Industrial Production&lt;/caption>
-&lt;/table>
-&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/103.embed?show_link=false">&lt;/iframe>
-&lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>Dec-23&lt;/th> &lt;th>Jan-24&lt;/th> &lt;th>Feb-24&lt;/th> &lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">22/12/2023&lt;/td>
-&lt;td data-table-dtype="text">2.7&lt;/td>
-&lt;td data-table-dtype="text">-36.62&lt;/td>
-&lt;td data-table-dtype="text">33.46&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">29/12/2023&lt;/td>
-&lt;td data-table-dtype="text">12.52&lt;/td>
-&lt;td data-table-dtype="text">-39.94&lt;/td>
-&lt;td data-table-dtype="number">69&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">05/01/2024&lt;/td>
-&lt;td data-table-dtype="text">8.04&lt;/td>
-&lt;td data-table-dtype="text">-15.26&lt;/td>
-&lt;td data-table-dtype="text">14.36&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">12/01/2024&lt;/td>
-&lt;td data-table-dtype="text">11.56&lt;/td>
-&lt;td data-table-dtype="text">-13.04&lt;/td>
-&lt;td data-table-dtype="text">36.25&lt;/td>
-&lt;/tr>
-&lt;caption>US Retail Sales&lt;/caption>
-&lt;/table>
-&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/105.embed?show_link=false">&lt;/iframe>
-&lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>Dec-23&lt;/th> &lt;th>Jan-24&lt;/th> &lt;th>Feb-24&lt;/th> &lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">22/12/2023&lt;/td>
-&lt;td data-table-dtype="text">97.55&lt;/td>
-&lt;td data-table-dtype="text">91.06&lt;/td>
-&lt;td data-table-dtype="text">70.38&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">29/12/2023&lt;/td>
-&lt;td data-table-dtype="text">125.78&lt;/td>
-&lt;td data-table-dtype="text">215.35&lt;/td>
-&lt;td data-table-dtype="text">122.4&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">05/01/2024&lt;/td>
-&lt;td data-table-dtype="text">129.91&lt;/td>
-&lt;td data-table-dtype="text">423.81&lt;/td>
-&lt;td data-table-dtype="text">109.87&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">12/01/2024&lt;/td>
-&lt;td data-table-dtype="text">104.62&lt;/td>
-&lt;td data-table-dtype="text">429.94&lt;/td>
-&lt;td data-table-dtype="text">122.7&lt;/td>
-&lt;/tr>
-&lt;caption>US Housing Starts&lt;/caption>
-&lt;/table>
-&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/107.embed?show_link=false">&lt;/iframe>
-&lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>Dec-23&lt;/th> &lt;th>Jan-24&lt;/th> &lt;th>Feb-24&lt;/th> &lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">22/12/2023&lt;/td>
-&lt;td data-table-dtype="text">-0.06&lt;/td>
-&lt;td data-table-dtype="text">-0.1&lt;/td>
-&lt;td data-table-dtype="text">-0.05&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">29/12/2023&lt;/td>
-&lt;td data-table-dtype="text">-0.04&lt;/td>
-&lt;td data-table-dtype="text">-0.11&lt;/td>
-&lt;td data-table-dtype="text">-0.07&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">05/01/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">-0.1&lt;/td>
-&lt;td data-table-dtype="text">-0.19&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">12/01/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">-0.1&lt;/td>
-&lt;td data-table-dtype="text">-0.2&lt;/td>
-&lt;/tr>
-&lt;caption>Federal Funds Rate&lt;/caption>
-&lt;/table>
-&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/109.embed?show_link=false">&lt;/iframe>
-&lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>Dec-23&lt;/th> &lt;th>Jan-24&lt;/th> &lt;th>Feb-24&lt;/th> &lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">22/12/2023&lt;/td>
-&lt;td data-table-dtype="text">-0.1&lt;/td>
-&lt;td data-table-dtype="text">-0.08&lt;/td>
-&lt;td data-table-dtype="text">-0.23&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">29/12/2023&lt;/td>
-&lt;td data-table-dtype="text">-0.13&lt;/td>
-&lt;td data-table-dtype="text">-0.1&lt;/td>
-&lt;td data-table-dtype="text">-0.25&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">05/01/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">-0.12&lt;/td>
-&lt;td data-table-dtype="text">-0.18&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">12/01/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">-0.12&lt;/td>
-&lt;td data-table-dtype="text">-0.2&lt;/td>
-&lt;/tr>
-&lt;caption>3-Month Treasury Bill Rate&lt;/caption>
-&lt;/table>
-&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/111.embed?show_link=false">&lt;/iframe>
-&lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>Dec-23&lt;/th> &lt;th>Jan-24&lt;/th> &lt;th>Feb-24&lt;/th> &lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">22/12/2023&lt;/td>
-&lt;td data-table-dtype="text">-0.42&lt;/td>
-&lt;td data-table-dtype="text">0.2&lt;/td>
-&lt;td data-table-dtype="text">0.04&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">29/12/2023&lt;/td>
-&lt;td data-table-dtype="text">-0.48&lt;/td>
-&lt;td data-table-dtype="text">0.23&lt;/td>
-&lt;td data-table-dtype="text">0.1&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">05/01/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">-0.24&lt;/td>
-&lt;td data-table-dtype="text">0.07&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">12/01/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">-0.22&lt;/td>
-&lt;td data-table-dtype="text">0.01&lt;/td>
-&lt;/tr>
-&lt;caption>10-Year Treasury Bond Rate&lt;/caption>
-&lt;/table>
-&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/113.embed?show_link=false">&lt;/iframe>
-&lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>Dec-23&lt;/th> &lt;th>Jan-24&lt;/th> &lt;th>Feb-24&lt;/th> &lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">22/12/2023&lt;/td>
-&lt;td data-table-dtype="text">-0.35&lt;/td>
-&lt;td data-table-dtype="text">0.37&lt;/td>
-&lt;td data-table-dtype="text">-0.09&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">29/12/2023&lt;/td>
-&lt;td data-table-dtype="text">-0.39&lt;/td>
-&lt;td data-table-dtype="text">0.33&lt;/td>
-&lt;td data-table-dtype="text">-0.07&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">05/01/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">-0.06&lt;/td>
-&lt;td data-table-dtype="text">0.21&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">12/01/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">-0.05&lt;/td>
-&lt;td data-table-dtype="text">0.24&lt;/td>
-&lt;/tr>
-&lt;caption>Moody&amp;rsquo;s Aaa Corporate Bond Yield&lt;/caption>
-&lt;/table>
-&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/115.embed?show_link=false">&lt;/iframe>
-&lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>Dec-23&lt;/th> &lt;th>Jan-24&lt;/th> &lt;th>Feb-24&lt;/th> &lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">22/12/2023&lt;/td>
-&lt;td data-table-dtype="text">-0.47&lt;/td>
-&lt;td data-table-dtype="text">0.25&lt;/td>
-&lt;td data-table-dtype="text">0.41&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">29/12/2023&lt;/td>
-&lt;td data-table-dtype="text">-0.55&lt;/td>
-&lt;td data-table-dtype="text">0.24&lt;/td>
-&lt;td data-table-dtype="text">0.41&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">05/01/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">-0.24&lt;/td>
-&lt;td data-table-dtype="text">0.06&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">12/01/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">-0.22&lt;/td>
-&lt;td data-table-dtype="text">0.06&lt;/td>
-&lt;/tr>
-&lt;caption>Moody&amp;rsquo;s Aaa Corporate Bond Yield&lt;/caption>
 &lt;/table>
 &lt;ul>
 &lt;li>Visualizing the determinants of nowcasts and how those have changed across time.&lt;/li>
