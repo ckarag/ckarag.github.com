@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-897461352" class="chart">&lt;/div>
+&lt;div id="chart-524831976" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-897461352', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-524831976', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -641,7 +641,7 @@ An extensive collection of uniformly designed MATLAB functions developed for pre
 $ \alpha $4casting real-time M$ \alpha $cro Monitor uses state-of-the-art datasets and statistical models developed exclusively for macroeconomic nowcasting, allowing to closely and accurately monitor economic activity in real-time. The predictive and pre-processing models used to produce our nowcasts and forecasts, follow research that has been published in top academic journals (JBES, Econometrica to name a few) following the scientific developments in predictive macro modelling of the last couple of years. Our models are evaluated frequently against their competing alternatives to guarantee leading preformance among the industry.
 The Macro Monitor avoids human judgment by operating entirely on a large pool of data released by official sources. It is fully automated and the predictions are continuously updated in real-time as soon as new data releases become available, allowing to incorporate the latest market and economic developments, hence providing the most up-to-date views for the current and future states of the economies being monitored.&lt;/p>
 &lt;h3 id="us">US&lt;/h3>
-&lt;p>Members subscribed to the newsletter can access the spreadsheets containing the latest nowcasts and forecasts as well as the full history of the projections &lt;a href="https://ckarag.github.io/uploads/US_m01_d0.xlsx" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;p>Members subscribed to the newsletter can access the spreadsheets containing the latest nowcasts and forecasts as well as the full history of the projections &lt;a href="https://ckarag.github.io/uploads/US_d0.xlsx" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/89.embed?show_link=false">&lt;/iframe>
 &lt;table class="table">
 &lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>2023Q4&lt;/th> &lt;th>2024Q1&lt;/th> &lt;th>2024Q2&lt;/th> &lt;/tr>
