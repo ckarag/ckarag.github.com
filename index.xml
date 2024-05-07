@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-386725419" class="chart">&lt;/div>
+&lt;div id="chart-315824679" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-386725419', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-315824679', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -659,14 +659,14 @@ The Macro Monitor avoids human judgment by operating entirely on a large pool of
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">26/04/2024&lt;/td>
-&lt;td data-table-dtype="text">1.6&lt;/td>
-&lt;td data-table-dtype="text">5.89&lt;/td>
+&lt;td data-table-dtype="text">2.69&lt;/td>
+&lt;td data-table-dtype="text">4.2&lt;/td>
 &lt;td data-table-dtype="text">2.65&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">03/05/2024&lt;/td>
-&lt;td data-table-dtype="text">2.61&lt;/td>
-&lt;td data-table-dtype="text">1.94&lt;/td>
+&lt;td data-table-dtype="text">2.26&lt;/td>
+&lt;td data-table-dtype="text">1.74&lt;/td>
 &lt;td data-table-dtype="text">2.65&lt;/td>
 &lt;/tr>
 &lt;caption>US Real GDP growth&lt;/caption>
@@ -688,15 +688,15 @@ The Macro Monitor avoids human judgment by operating entirely on a large pool of
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">26/04/2024&lt;/td>
-&lt;td data-table-dtype="text">3.36&lt;/td>
-&lt;td data-table-dtype="text">3.3&lt;/td>
-&lt;td data-table-dtype="text">3.19&lt;/td>
+&lt;td data-table-dtype="text">3.34&lt;/td>
+&lt;td data-table-dtype="text">3.21&lt;/td>
+&lt;td data-table-dtype="text">3.21&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">03/05/2024&lt;/td>
 &lt;td data-table-dtype="text">3.76&lt;/td>
+&lt;td data-table-dtype="text">3.65&lt;/td>
 &lt;td data-table-dtype="text">3.6&lt;/td>
-&lt;td data-table-dtype="text">3.44&lt;/td>
 &lt;/tr>
 &lt;caption>US Headline CPI Inflation&lt;/caption>
 &lt;/table>
@@ -717,15 +717,15 @@ The Macro Monitor avoids human judgment by operating entirely on a large pool of
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">26/04/2024&lt;/td>
-&lt;td data-table-dtype="text">3.33&lt;/td>
+&lt;td data-table-dtype="text">3.24&lt;/td>
+&lt;td data-table-dtype="text">3.12&lt;/td>
 &lt;td data-table-dtype="text">3.07&lt;/td>
-&lt;td data-table-dtype="text">2.88&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">03/05/2024&lt;/td>
-&lt;td data-table-dtype="text">3.51&lt;/td>
-&lt;td data-table-dtype="text">2.66&lt;/td>
-&lt;td data-table-dtype="text">2.96&lt;/td>
+&lt;td data-table-dtype="text">3.54&lt;/td>
+&lt;td data-table-dtype="text">2.85&lt;/td>
+&lt;td data-table-dtype="text">3.35&lt;/td>
 &lt;/tr>
 &lt;caption>US Core CPI Inflation&lt;/caption>
 &lt;/table>
@@ -748,12 +748,12 @@ The Macro Monitor avoids human judgment by operating entirely on a large pool of
 &lt;td data-table-dtype="text">26/04/2024&lt;/td>
 &lt;td data-table-dtype="text">-0.02&lt;/td>
 &lt;td data-table-dtype="text">-0.01&lt;/td>
-&lt;td data-table-dtype="text">0.03&lt;/td>
+&lt;td data-table-dtype="text">0.05&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">03/05/2024&lt;/td>
 &lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">-0.01&lt;/td>
+&lt;td data-table-dtype="text">-0.02&lt;/td>
 &lt;td data-table-dtype="text">-0.03&lt;/td>
 &lt;/tr>
 &lt;caption>US Unemployment Rate Change&lt;/caption>
@@ -776,14 +776,14 @@ The Macro Monitor avoids human judgment by operating entirely on a large pool of
 &lt;tr>
 &lt;td data-table-dtype="text">26/04/2024&lt;/td>
 &lt;td data-table-dtype="text">0.12&lt;/td>
-&lt;td data-table-dtype="text">0.08&lt;/td>
+&lt;td data-table-dtype="text">0.1&lt;/td>
 &lt;td data-table-dtype="text">0.04&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">03/05/2024&lt;/td>
 &lt;td data-table-dtype="text">&lt;/td>
 &lt;td data-table-dtype="text">0.13&lt;/td>
-&lt;td data-table-dtype="text">0.07&lt;/td>
+&lt;td data-table-dtype="text">0.09&lt;/td>
 &lt;/tr>
 &lt;caption>US Payroll employment (nonfarm, SA)&lt;/caption>
 &lt;/table>
@@ -804,15 +804,15 @@ The Macro Monitor avoids human judgment by operating entirely on a large pool of
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">26/04/2024&lt;/td>
-&lt;td data-table-dtype="text">4.08&lt;/td>
-&lt;td data-table-dtype="text">1.06&lt;/td>
+&lt;td data-table-dtype="text">3.99&lt;/td>
+&lt;td data-table-dtype="text">1.48&lt;/td>
 &lt;td data-table-dtype="text">2.31&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">03/05/2024&lt;/td>
-&lt;td data-table-dtype="text">-9.54&lt;/td>
-&lt;td data-table-dtype="text">0.1&lt;/td>
-&lt;td data-table-dtype="text">3.42&lt;/td>
+&lt;td data-table-dtype="text">-7.03&lt;/td>
+&lt;td data-table-dtype="text">-0.5&lt;/td>
+&lt;td data-table-dtype="text">4.04&lt;/td>
 &lt;/tr>
 &lt;caption>US Industrial Production&lt;/caption>
 &lt;/table>
