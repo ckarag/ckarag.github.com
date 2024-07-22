@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-791625384" class="chart">&lt;/div>
+&lt;div id="chart-493752618" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-791625384', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-493752618', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -644,175 +644,175 @@ The Macro Monitor avoids human judgment by operating entirely on a large pool of
 &lt;p>The graphs below show the weekly evolution of the nowcasts for the respective period, as models are updated each Friday to reflect newly released information from the preceding week. The realized figures (labelled as ‘Actual’) reflect the revisions from the official source made at the 2 most recent releases (as indicated by the ‘as of’ date in the hover-over text). Members subscribed to the newsletter can access the spreadsheets containing the latest nowcasts and forecasts as well as the full history of the projections &lt;a href="https://ckarag.github.io/uploads/US_d0.xlsx" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/89.embed?show_link=false">&lt;/iframe>
 &lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>2024Q1&lt;/th> &lt;th>2024Q2&lt;/th> &lt;th>2024Q3&lt;/th> &lt;/tr>
+&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>2024Q2&lt;/th> &lt;th>2024Q3&lt;/th> &lt;th>2024Q4&lt;/th> &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">31/05/2024&lt;/td>
-&lt;td data-table-dtype="text">1.99&lt;/td>
-&lt;td data-table-dtype="text">4.69&lt;/td>
-&lt;td data-table-dtype="text">2.61&lt;/td>
+&lt;td data-table-dtype="text">28/06/2024&lt;/td>
+&lt;td data-table-dtype="text">4.33&lt;/td>
+&lt;td data-table-dtype="text">2.42&lt;/td>
+&lt;td data-table-dtype="text">2.65&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">07/06/2024&lt;/td>
-&lt;td data-table-dtype="text">2.1&lt;/td>
-&lt;td data-table-dtype="text">4.6&lt;/td>
-&lt;td data-table-dtype="text">2.66&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">14/06/2024&lt;/td>
-&lt;td data-table-dtype="text">2.1&lt;/td>
-&lt;td data-table-dtype="text">4.43&lt;/td>
-&lt;td data-table-dtype="text">2.31&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">21/06/2024&lt;/td>
-&lt;td data-table-dtype="text">2.14&lt;/td>
-&lt;td data-table-dtype="text">4.34&lt;/td>
+&lt;td data-table-dtype="text">05/07/2024&lt;/td>
+&lt;td data-table-dtype="text">3.4&lt;/td>
+&lt;td data-table-dtype="text">4.46&lt;/td>
 &lt;td data-table-dtype="text">2.64&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">12/07/2024&lt;/td>
+&lt;td data-table-dtype="text">3.22&lt;/td>
+&lt;td data-table-dtype="text">4.78&lt;/td>
+&lt;td data-table-dtype="text">2.64&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">19/07/2024&lt;/td>
+&lt;td data-table-dtype="text">4.1&lt;/td>
+&lt;td data-table-dtype="text">4.49&lt;/td>
+&lt;td data-table-dtype="text">2.68&lt;/td>
 &lt;/tr>
 &lt;caption>US Real GDP growth&lt;/caption>
 &lt;/table>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/93.embed?show_link=false">&lt;/iframe>
 &lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>May-24&lt;/th> &lt;th>Jun-24&lt;/th> &lt;th>Jul-24&lt;/th> &lt;/tr>
+&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>Jun-24&lt;/th> &lt;th>Jul-24&lt;/th> &lt;th>Aug-24&lt;/th> &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">31/05/2024&lt;/td>
-&lt;td data-table-dtype="text">3.59&lt;/td>
-&lt;td data-table-dtype="text">3.8&lt;/td>
-&lt;td data-table-dtype="text">3.83&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">07/06/2024&lt;/td>
-&lt;td data-table-dtype="text">3.73&lt;/td>
-&lt;td data-table-dtype="text">3.78&lt;/td>
-&lt;td data-table-dtype="text">3.71&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">14/06/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
+&lt;td data-table-dtype="text">28/06/2024&lt;/td>
 &lt;td data-table-dtype="text">3.25&lt;/td>
-&lt;td data-table-dtype="text">3.29&lt;/td>
+&lt;td data-table-dtype="text">3.17&lt;/td>
+&lt;td data-table-dtype="text">3.24&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">21/06/2024&lt;/td>
+&lt;td data-table-dtype="text">05/07/2024&lt;/td>
+&lt;td data-table-dtype="text">3.46&lt;/td>
+&lt;td data-table-dtype="text">3.2&lt;/td>
+&lt;td data-table-dtype="text">3.24&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">12/07/2024&lt;/td>
 &lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">3.23&lt;/td>
-&lt;td data-table-dtype="text">3.15&lt;/td>
+&lt;td data-table-dtype="text">2.93&lt;/td>
+&lt;td data-table-dtype="text">2.76&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">19/07/2024&lt;/td>
+&lt;td data-table-dtype="text">&lt;/td>
+&lt;td data-table-dtype="text">2.93&lt;/td>
+&lt;td data-table-dtype="text">2.77&lt;/td>
 &lt;/tr>
 &lt;caption>US Headline CPI Inflation&lt;/caption>
 &lt;/table>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/95.embed?show_link=false">&lt;/iframe>
 &lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>May-24&lt;/th> &lt;th>Jun-24&lt;/th> &lt;th>Jul-24&lt;/th> &lt;/tr>
+&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>Jun-24&lt;/th> &lt;th>Jul-24&lt;/th> &lt;th>Aug-24&lt;/th> &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">31/05/2024&lt;/td>
-&lt;td data-table-dtype="text">3.29&lt;/td>
-&lt;td data-table-dtype="text">3.25&lt;/td>
-&lt;td data-table-dtype="text">3.7&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">07/06/2024&lt;/td>
-&lt;td data-table-dtype="text">4.09&lt;/td>
-&lt;td data-table-dtype="text">3.33&lt;/td>
-&lt;td data-table-dtype="text">3.86&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">14/06/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
+&lt;td data-table-dtype="text">28/06/2024&lt;/td>
 &lt;td data-table-dtype="text">2.61&lt;/td>
-&lt;td data-table-dtype="text">3.07&lt;/td>
+&lt;td data-table-dtype="text">3.18&lt;/td>
+&lt;td data-table-dtype="text">3.56&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">21/06/2024&lt;/td>
+&lt;td data-table-dtype="text">05/07/2024&lt;/td>
+&lt;td data-table-dtype="text">3.75&lt;/td>
+&lt;td data-table-dtype="text">2.59&lt;/td>
+&lt;td data-table-dtype="text">3.49&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">12/07/2024&lt;/td>
 &lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">2.76&lt;/td>
-&lt;td data-table-dtype="text">3.11&lt;/td>
+&lt;td data-table-dtype="text">2.06&lt;/td>
+&lt;td data-table-dtype="text">2.9&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">19/07/2024&lt;/td>
+&lt;td data-table-dtype="text">&lt;/td>
+&lt;td data-table-dtype="text">1.92&lt;/td>
+&lt;td data-table-dtype="text">2.79&lt;/td>
 &lt;/tr>
 &lt;caption>US Core CPI Inflation&lt;/caption>
 &lt;/table>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/97.embed?show_link=false">&lt;/iframe>
 &lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>May-24&lt;/th> &lt;th>Jun-24&lt;/th> &lt;th>Jul-24&lt;/th> &lt;/tr>
+&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>Jun-24&lt;/th> &lt;th>Jul-24&lt;/th> &lt;th>Aug-24&lt;/th> &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">31/05/2024&lt;/td>
-&lt;td data-table-dtype="text">-0.02&lt;/td>
-&lt;td data-table-dtype="text">-0.03&lt;/td>
-&lt;td data-table-dtype="text">0.05&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">07/06/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">-0.02&lt;/td>
-&lt;td data-table-dtype="text">-0.03&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">14/06/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
+&lt;td data-table-dtype="text">28/06/2024&lt;/td>
 &lt;td data-table-dtype="text">-0.01&lt;/td>
-&lt;td data-table-dtype="text">-0.01&lt;/td>
+&lt;td data-table-dtype="text">-0.02&lt;/td>
+&lt;td data-table-dtype="text">0.04&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">21/06/2024&lt;/td>
+&lt;td data-table-dtype="text">05/07/2024&lt;/td>
 &lt;td data-table-dtype="text">&lt;/td>
 &lt;td data-table-dtype="text">-0.01&lt;/td>
 &lt;td data-table-dtype="text">-0.02&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">12/07/2024&lt;/td>
+&lt;td data-table-dtype="text">&lt;/td>
+&lt;td data-table-dtype="text">-0.01&lt;/td>
+&lt;td data-table-dtype="text">-0.02&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">19/07/2024&lt;/td>
+&lt;td data-table-dtype="text">&lt;/td>
+&lt;td data-table-dtype="text">-0.01&lt;/td>
+&lt;td data-table-dtype="text">-0.01&lt;/td>
 &lt;/tr>
 &lt;caption>US Unemployment Rate Change&lt;/caption>
 &lt;/table>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/99.embed?show_link=false">&lt;/iframe>
 &lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>May-24&lt;/th> &lt;th>Jun-24&lt;/th> &lt;th>Jul-24&lt;/th> &lt;/tr>
+&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>Jun-24&lt;/th> &lt;th>Jul-24&lt;/th> &lt;th>Aug-24&lt;/th> &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">31/05/2024&lt;/td>
-&lt;td data-table-dtype="text">0.15&lt;/td>
+&lt;td data-table-dtype="text">28/06/2024&lt;/td>
+&lt;td data-table-dtype="text">0.12&lt;/td>
+&lt;td data-table-dtype="text">0.11&lt;/td>
+&lt;td data-table-dtype="text">0.04&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">05/07/2024&lt;/td>
+&lt;td data-table-dtype="text">&lt;/td>
 &lt;td data-table-dtype="text">0.13&lt;/td>
-&lt;td data-table-dtype="text">0.06&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">07/06/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">0.15&lt;/td>
 &lt;td data-table-dtype="text">0.12&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">14/06/2024&lt;/td>
-&lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">0.11&lt;/td>
-&lt;td data-table-dtype="text">0.07&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td data-table-dtype="text">21/06/2024&lt;/td>
+&lt;td data-table-dtype="text">12/07/2024&lt;/td>
 &lt;td data-table-dtype="text">&lt;/td>
 &lt;td data-table-dtype="text">0.12&lt;/td>
 &lt;td data-table-dtype="text">0.11&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">19/07/2024&lt;/td>
+&lt;td data-table-dtype="text">&lt;/td>
+&lt;td data-table-dtype="text">0.1&lt;/td>
+&lt;td data-table-dtype="text">0.09&lt;/td>
 &lt;/tr>
 &lt;caption>US Payroll employment (nonfarm, SA)&lt;/caption>
 &lt;/table>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/101.embed?show_link=false">&lt;/iframe>
 &lt;table class="table">
-&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>May-24&lt;/th> &lt;th>Jun-24&lt;/th> &lt;th>Jul-24&lt;/th> &lt;/tr>
+&lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>Jun-24&lt;/th> &lt;th>Jul-24&lt;/th> &lt;th>Aug-24&lt;/th> &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">31/05/2024&lt;/td>
-&lt;td data-table-dtype="text">4.56&lt;/td>
-&lt;td data-table-dtype="text">3.65&lt;/td>
+&lt;td data-table-dtype="text">28/06/2024&lt;/td>
+&lt;td data-table-dtype="text">5.47&lt;/td>
+&lt;td data-table-dtype="text">2.44&lt;/td>
 &lt;td data-table-dtype="text">2.31&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">07/06/2024&lt;/td>
-&lt;td data-table-dtype="text">9.3&lt;/td>
-&lt;td data-table-dtype="text">8.51&lt;/td>
-&lt;td data-table-dtype="text">1.15&lt;/td>
+&lt;td data-table-dtype="text">05/07/2024&lt;/td>
+&lt;td data-table-dtype="text">13.04&lt;/td>
+&lt;td data-table-dtype="text">10.36&lt;/td>
+&lt;td data-table-dtype="text">1.85&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">14/06/2024&lt;/td>
-&lt;td data-table-dtype="text">-0.48&lt;/td>
-&lt;td data-table-dtype="text">4.68&lt;/td>
-&lt;td data-table-dtype="text">3.21&lt;/td>
+&lt;td data-table-dtype="text">12/07/2024&lt;/td>
+&lt;td data-table-dtype="text">13.99&lt;/td>
+&lt;td data-table-dtype="text">8.97&lt;/td>
+&lt;td data-table-dtype="text">4.02&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td data-table-dtype="text">21/06/2024&lt;/td>
+&lt;td data-table-dtype="text">19/07/2024&lt;/td>
 &lt;td data-table-dtype="text">&lt;/td>
-&lt;td data-table-dtype="text">6.06&lt;/td>
-&lt;td data-table-dtype="text">1.98&lt;/td>
+&lt;td data-table-dtype="text">3.86&lt;/td>
+&lt;td data-table-dtype="text">3.79&lt;/td>
 &lt;/tr>
 &lt;caption>US Industrial Production&lt;/caption>
 &lt;/table>
