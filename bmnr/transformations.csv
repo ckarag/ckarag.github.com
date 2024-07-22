@@ -1,0 +1,4 @@
+Acronym,Transformation Description
+D1,Down-sampling to Quarterly  (Temporal aggregation with equal-weights)
+D2,Unrestricted MIDAS Polynomials
+D3,Legendre Polynomials (3rd degree)

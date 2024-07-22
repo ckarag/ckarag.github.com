@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-493752618" class="chart">&lt;/div>
+&lt;div id="chart-267513894" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-493752618', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-267513894', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -841,767 +841,877 @@ style="border:none;">
 &lt;ul>
 &lt;li>Babii, A., Ghysels E., &amp;amp; Striaukas, J. (2022). &amp;ldquo;Machine learning time series regressions with an application to nowcasting.&amp;rdquo; Journal of Business &amp;amp; Economic Statistics, 40(3), 1094-1106.&lt;/li>
 &lt;li>Stock, J. H., &amp;amp; Watson, M. W. (2002). &amp;ldquo;Macroeconomic forecasting using diffusion indexes.&amp;rdquo; Journal of Business &amp;amp; Economic Statistics, 20(2), 147-162.&lt;/li>
-&lt;/ul></description></item><item><title>The Big Macro Nowcasting Ranking</title><link>https://ckarag.github.io/bmnr/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/bmnr/</guid><description>&lt;h3 id="us">US&lt;/h3>
-&lt;ul>
+&lt;/ul>
+&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/73.embed?show_link=false">&lt;/iframe></description></item><item><title>The Big Macro Nowcasting Ranking</title><link>https://ckarag.github.io/bmnr/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/bmnr/</guid><description>&lt;ul>
 &lt;li>Performance evaluation exercise with monthly (pseudo) real-time vintages of a mixed-frequency large dataset for the US. The target variable is real GDP growth. Reported figures are RMSE relative to the AR(1). The horizon denotes quarters-ahead. D1 denots single-frequency information set; D2 mixed-frequency. The monthly vintages can be accessed &lt;a href="https://drive.google.com/file/d/1HpshcZK7v35X5xJNlaQhsFGY9-zd5iDf/view?usp=share_link" target="_blank" rel="noopener">here&lt;/a>.&lt;/li>
 &lt;/ul>
+&lt;h2 id="list-of-forecasting-models--transformations">List of forecasting models &amp;amp; transformations&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>List of time series forecasting models
+&lt;table class="table">
+&lt;tr> &lt;th>Acronym&lt;/th> &lt;th>Model Description&lt;/th> &lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">AR(P)&lt;/td>
+&lt;td data-table-dtype="text">Autoregressive iterated-specification&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">RW&lt;/td>
+&lt;td data-table-dtype="text">Random walk&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">ARDI(K,BIC)&lt;/td>
+&lt;td data-table-dtype="text">Autoregressive diffusion indices with K factors. Optimal lag-order via BIC&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">T.ARDI(K,BIC)&lt;/td>
+&lt;td data-table-dtype="text">ARDI with target-factors. Hard-threshold set to |t-stat|&amp;gt;1.96&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">BVAR-Minn&lt;/td>
+&lt;td data-table-dtype="text">Homoscedastic large Bayesian VAR&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">BVAR-CSV&lt;/td>
+&lt;td data-table-dtype="text">Large Bayesian VAR with heteroscedastic innovations&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">BBoost&lt;/td>
+&lt;td data-table-dtype="text">Quadratic-loss L2 boosting, block-wise&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">CBoost&lt;/td>
+&lt;td data-table-dtype="text">Quadratic-loss L2 boosting, component-wise&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">CSR&lt;/td>
+&lt;td data-table-dtype="text">Complete Subset Regressions (20C4) with hard-thresholding preselection&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">Bag&lt;/td>
+&lt;td data-table-dtype="text">Linear bagging with hard-thresholding preselection&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">BTree&lt;/td>
+&lt;td data-table-dtype="text">Boosting regression trees&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">RF&lt;/td>
+&lt;td data-table-dtype="text">Random forests&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">SVR&lt;/td>
+&lt;td data-table-dtype="text">Support vector machine regression with Gaussian Kernel function&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">Ridge&lt;/td>
+&lt;td data-table-dtype="text">Ridge regression&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">LASSO&lt;/td>
+&lt;td data-table-dtype="text">Least absolute shrinkage and selection operator with BIC for lambda&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">AdaLASSO&lt;/td>
+&lt;td data-table-dtype="text">Adaptive LASSO&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">EN&lt;/td>
+&lt;td data-table-dtype="text">Elastic Net&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">AdaEN&lt;/td>
+&lt;td data-table-dtype="text">Adaptive EN&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">LSTM&lt;/td>
+&lt;td data-table-dtype="text">Long-short-term memory RNN with 3-hidden layers&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">SgLASSO&lt;/td>
+&lt;td data-table-dtype="text">Sparse-group-LASSO-MIDAS with block-K-fold CV for lambda &amp;amp; alpha&lt;/td>
+&lt;/tr>
+&lt;/table>
+&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>List of methods for treating mixed-frequencies
+&lt;table class="table">
+&lt;tr> &lt;th>Acronym&lt;/th> &lt;th>Transformation Description&lt;/th> &lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">D1&lt;/td>
+&lt;td data-table-dtype="text">Down-sampling to Quarterly (Temporal aggregation with equal-weights)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">D2&lt;/td>
+&lt;td data-table-dtype="text">Unrestricted MIDAS Polynomials&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="text">D3&lt;/td>
+&lt;td data-table-dtype="text">Legendre Polynomials (3rd degree)&lt;/td>
+&lt;/tr>
+&lt;/table>
+&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="the-ranking-real-time-model-evaluation">The Ranking: Real-time model evaluation&lt;/h2>
 &lt;table class="table">
 &lt;tr> &lt;th>Models&lt;/th> &lt;th>n=0&lt;/th> &lt;th>n=1&lt;/th> &lt;th>n=2&lt;/th> &lt;th>n=3&lt;/th> &lt;th>n=4&lt;/th> &lt;th>avg&lt;/th> &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Bag-D3&lt;/td>
-&lt;td data-table-dtype="text">0.728332192331202&lt;/td>
-&lt;td data-table-dtype="text">0.932014795258418&lt;/td>
-&lt;td data-table-dtype="text">0.971647513073489&lt;/td>
-&lt;td data-table-dtype="text">0.998012423301907&lt;/td>
-&lt;td data-table-dtype="text">0.994387426665668&lt;/td>
-&lt;td data-table-dtype="text">0.924878870126137&lt;/td>
+&lt;td data-table-dtype="text">0.728&lt;/td>
+&lt;td data-table-dtype="text">0.932&lt;/td>
+&lt;td data-table-dtype="text">0.972&lt;/td>
+&lt;td data-table-dtype="text">0.998&lt;/td>
+&lt;td data-table-dtype="text">0.994&lt;/td>
+&lt;td data-table-dtype="text">0.925&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">CSR-D2&lt;/td>
-&lt;td data-table-dtype="text">0.707467218665457&lt;/td>
-&lt;td data-table-dtype="text">0.93809066070506&lt;/td>
-&lt;td data-table-dtype="text">0.976337980951085&lt;/td>
-&lt;td data-table-dtype="text">1.00021949830448&lt;/td>
-&lt;td data-table-dtype="text">1.00434158982109&lt;/td>
-&lt;td data-table-dtype="text">0.925291389689434&lt;/td>
+&lt;td data-table-dtype="text">0.707&lt;/td>
+&lt;td data-table-dtype="text">0.938&lt;/td>
+&lt;td data-table-dtype="text">0.976&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">1.004&lt;/td>
+&lt;td data-table-dtype="text">0.925&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BBoost-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.724599612368521&lt;/td>
-&lt;td data-table-dtype="text">0.924629988170019&lt;/td>
-&lt;td data-table-dtype="text">0.977540806255768&lt;/td>
-&lt;td data-table-dtype="text">1.00585305652258&lt;/td>
-&lt;td data-table-dtype="text">1.00138984500882&lt;/td>
-&lt;td data-table-dtype="text">0.92680266166514&lt;/td>
+&lt;td data-table-dtype="text">0.725&lt;/td>
+&lt;td data-table-dtype="text">0.925&lt;/td>
+&lt;td data-table-dtype="text">0.978&lt;/td>
+&lt;td data-table-dtype="text">1.006&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.927&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Bag-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.772082421729186&lt;/td>
-&lt;td data-table-dtype="text">0.910240931753802&lt;/td>
-&lt;td data-table-dtype="text">0.967154334491486&lt;/td>
-&lt;td data-table-dtype="text">0.994371742627846&lt;/td>
-&lt;td data-table-dtype="text">0.998752034787106&lt;/td>
-&lt;td data-table-dtype="text">0.928520293077885&lt;/td>
+&lt;td data-table-dtype="text">0.772&lt;/td>
+&lt;td data-table-dtype="text">0.91&lt;/td>
+&lt;td data-table-dtype="text">0.967&lt;/td>
+&lt;td data-table-dtype="text">0.994&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">0.929&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Ridge-D1&lt;/td>
-&lt;td data-table-dtype="text">0.764452959576808&lt;/td>
-&lt;td data-table-dtype="text">0.924032808048014&lt;/td>
-&lt;td data-table-dtype="text">0.95825611161833&lt;/td>
-&lt;td data-table-dtype="text">0.996078398938869&lt;/td>
-&lt;td data-table-dtype="text">1.00093789464989&lt;/td>
-&lt;td data-table-dtype="text">0.928751634566381&lt;/td>
+&lt;td data-table-dtype="text">0.764&lt;/td>
+&lt;td data-table-dtype="text">0.924&lt;/td>
+&lt;td data-table-dtype="text">0.958&lt;/td>
+&lt;td data-table-dtype="text">0.996&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.929&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Ridge-D2&lt;/td>
-&lt;td data-table-dtype="text">0.741766549119286&lt;/td>
-&lt;td data-table-dtype="text">0.926393646278102&lt;/td>
-&lt;td data-table-dtype="text">0.971853145225267&lt;/td>
-&lt;td data-table-dtype="text">1.00076789740253&lt;/td>
-&lt;td data-table-dtype="text">1.0048247921359&lt;/td>
-&lt;td data-table-dtype="text">0.929121206032218&lt;/td>
+&lt;td data-table-dtype="text">0.742&lt;/td>
+&lt;td data-table-dtype="text">0.926&lt;/td>
+&lt;td data-table-dtype="text">0.972&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">1.005&lt;/td>
+&lt;td data-table-dtype="text">0.929&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Bag-D2&lt;/td>
-&lt;td data-table-dtype="text">0.766542876139499&lt;/td>
-&lt;td data-table-dtype="text">0.921291214604081&lt;/td>
-&lt;td data-table-dtype="text">0.968701835070545&lt;/td>
-&lt;td data-table-dtype="text">0.993457862675929&lt;/td>
-&lt;td data-table-dtype="text">1.00196047916372&lt;/td>
-&lt;td data-table-dtype="text">0.930390853530756&lt;/td>
+&lt;td data-table-dtype="text">0.767&lt;/td>
+&lt;td data-table-dtype="text">0.921&lt;/td>
+&lt;td data-table-dtype="text">0.969&lt;/td>
+&lt;td data-table-dtype="text">0.993&lt;/td>
+&lt;td data-table-dtype="text">1.002&lt;/td>
+&lt;td data-table-dtype="text">0.93&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">T.ARDI(2)&lt;/td>
-&lt;td data-table-dtype="text">0.74518381757044&lt;/td>
-&lt;td data-table-dtype="text">0.92930918121252&lt;/td>
-&lt;td data-table-dtype="text">0.975402092141944&lt;/td>
-&lt;td data-table-dtype="text">1.00249192383017&lt;/td>
-&lt;td data-table-dtype="text">1.00656305083848&lt;/td>
-&lt;td data-table-dtype="text">0.931790013118709&lt;/td>
+&lt;td data-table-dtype="text">0.745&lt;/td>
+&lt;td data-table-dtype="text">0.929&lt;/td>
+&lt;td data-table-dtype="text">0.975&lt;/td>
+&lt;td data-table-dtype="text">1.002&lt;/td>
+&lt;td data-table-dtype="text">1.007&lt;/td>
+&lt;td data-table-dtype="text">0.932&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Bag-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.759094034614202&lt;/td>
-&lt;td data-table-dtype="text">0.925326967373882&lt;/td>
-&lt;td data-table-dtype="text">0.969664482538132&lt;/td>
-&lt;td data-table-dtype="text">1.00459085376306&lt;/td>
-&lt;td data-table-dtype="text">1.00060695919512&lt;/td>
-&lt;td data-table-dtype="text">0.931856659496879&lt;/td>
+&lt;td data-table-dtype="text">0.759&lt;/td>
+&lt;td data-table-dtype="text">0.925&lt;/td>
+&lt;td data-table-dtype="text">0.97&lt;/td>
+&lt;td data-table-dtype="text">1.005&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.932&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Bag-D1&lt;/td>
-&lt;td data-table-dtype="text">0.782598111995561&lt;/td>
-&lt;td data-table-dtype="text">0.917583595105918&lt;/td>
-&lt;td data-table-dtype="text">0.961378682246583&lt;/td>
-&lt;td data-table-dtype="text">0.996216195688481&lt;/td>
-&lt;td data-table-dtype="text">1.00210616509478&lt;/td>
-&lt;td data-table-dtype="text">0.931976550026265&lt;/td>
+&lt;td data-table-dtype="text">0.783&lt;/td>
+&lt;td data-table-dtype="text">0.918&lt;/td>
+&lt;td data-table-dtype="text">0.961&lt;/td>
+&lt;td data-table-dtype="text">0.996&lt;/td>
+&lt;td data-table-dtype="text">1.002&lt;/td>
+&lt;td data-table-dtype="text">0.932&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">CSR-D1&lt;/td>
-&lt;td data-table-dtype="text">0.75810017090141&lt;/td>
-&lt;td data-table-dtype="text">0.933881637932026&lt;/td>
-&lt;td data-table-dtype="text">0.974067531770235&lt;/td>
-&lt;td data-table-dtype="text">1.00435916728513&lt;/td>
-&lt;td data-table-dtype="text">1.0085513027622&lt;/td>
-&lt;td data-table-dtype="text">0.9357919621302&lt;/td>
+&lt;td data-table-dtype="text">0.758&lt;/td>
+&lt;td data-table-dtype="text">0.934&lt;/td>
+&lt;td data-table-dtype="text">0.974&lt;/td>
+&lt;td data-table-dtype="text">1.004&lt;/td>
+&lt;td data-table-dtype="text">1.009&lt;/td>
+&lt;td data-table-dtype="text">0.936&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Ridge-D3&lt;/td>
-&lt;td data-table-dtype="text">0.790771782650294&lt;/td>
-&lt;td data-table-dtype="text">0.921256932957152&lt;/td>
-&lt;td data-table-dtype="text">0.968720497723239&lt;/td>
-&lt;td data-table-dtype="text">1.00442283640012&lt;/td>
-&lt;td data-table-dtype="text">1.00258044650097&lt;/td>
-&lt;td data-table-dtype="text">0.937550499246356&lt;/td>
+&lt;td data-table-dtype="text">0.791&lt;/td>
+&lt;td data-table-dtype="text">0.921&lt;/td>
+&lt;td data-table-dtype="text">0.969&lt;/td>
+&lt;td data-table-dtype="text">1.004&lt;/td>
+&lt;td data-table-dtype="text">1.003&lt;/td>
+&lt;td data-table-dtype="text">0.938&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">RF-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.816466611502763&lt;/td>
-&lt;td data-table-dtype="text">0.917235900026728&lt;/td>
-&lt;td data-table-dtype="text">0.966296699554291&lt;/td>
-&lt;td data-table-dtype="text">0.995483014481346&lt;/td>
-&lt;td data-table-dtype="text">0.992326593672387&lt;/td>
-&lt;td data-table-dtype="text">0.937561763847503&lt;/td>
+&lt;td data-table-dtype="text">0.816&lt;/td>
+&lt;td data-table-dtype="text">0.917&lt;/td>
+&lt;td data-table-dtype="text">0.966&lt;/td>
+&lt;td data-table-dtype="text">0.995&lt;/td>
+&lt;td data-table-dtype="text">0.992&lt;/td>
+&lt;td data-table-dtype="text">0.938&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Ridge-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.807744978229281&lt;/td>
-&lt;td data-table-dtype="text">0.91266521154945&lt;/td>
-&lt;td data-table-dtype="text">0.967533548603804&lt;/td>
-&lt;td data-table-dtype="text">0.999193158538889&lt;/td>
-&lt;td data-table-dtype="text">1.00356521285472&lt;/td>
-&lt;td data-table-dtype="text">0.938140421955228&lt;/td>
+&lt;td data-table-dtype="text">0.808&lt;/td>
+&lt;td data-table-dtype="text">0.913&lt;/td>
+&lt;td data-table-dtype="text">0.968&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">1.004&lt;/td>
+&lt;td data-table-dtype="text">0.938&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">CBoost-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.773323683435238&lt;/td>
-&lt;td data-table-dtype="text">0.925181261923768&lt;/td>
-&lt;td data-table-dtype="text">0.98288979000087&lt;/td>
-&lt;td data-table-dtype="text">1.00968312367158&lt;/td>
-&lt;td data-table-dtype="text">1.00110708087545&lt;/td>
-&lt;td data-table-dtype="text">0.938436987981382&lt;/td>
+&lt;td data-table-dtype="text">0.773&lt;/td>
+&lt;td data-table-dtype="text">0.925&lt;/td>
+&lt;td data-table-dtype="text">0.983&lt;/td>
+&lt;td data-table-dtype="text">1.01&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.938&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">SVR-D1&lt;/td>
-&lt;td data-table-dtype="text">0.824746452434839&lt;/td>
-&lt;td data-table-dtype="text">0.919277601467568&lt;/td>
-&lt;td data-table-dtype="text">0.963999985865605&lt;/td>
-&lt;td data-table-dtype="text">0.991698132852486&lt;/td>
-&lt;td data-table-dtype="text">0.995094108963213&lt;/td>
-&lt;td data-table-dtype="text">0.938963256316742&lt;/td>
+&lt;td data-table-dtype="text">0.825&lt;/td>
+&lt;td data-table-dtype="text">0.919&lt;/td>
+&lt;td data-table-dtype="text">0.964&lt;/td>
+&lt;td data-table-dtype="text">0.992&lt;/td>
+&lt;td data-table-dtype="text">0.995&lt;/td>
+&lt;td data-table-dtype="text">0.939&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">LASSO-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.787406976947266&lt;/td>
-&lt;td data-table-dtype="text">0.929910639419898&lt;/td>
-&lt;td data-table-dtype="text">0.977923250186209&lt;/td>
-&lt;td data-table-dtype="text">1.00164074549919&lt;/td>
-&lt;td data-table-dtype="text">0.998693946764309&lt;/td>
-&lt;td data-table-dtype="text">0.939115111763374&lt;/td>
+&lt;td data-table-dtype="text">0.787&lt;/td>
+&lt;td data-table-dtype="text">0.93&lt;/td>
+&lt;td data-table-dtype="text">0.978&lt;/td>
+&lt;td data-table-dtype="text">1.002&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">0.939&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AdaLASSO-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.781204486941875&lt;/td>
-&lt;td data-table-dtype="text">0.936549424687395&lt;/td>
-&lt;td data-table-dtype="text">0.980046781247979&lt;/td>
-&lt;td data-table-dtype="text">1.00335935809904&lt;/td>
-&lt;td data-table-dtype="text">0.99797825491786&lt;/td>
-&lt;td data-table-dtype="text">0.93982766117883&lt;/td>
+&lt;td data-table-dtype="text">0.781&lt;/td>
+&lt;td data-table-dtype="text">0.937&lt;/td>
+&lt;td data-table-dtype="text">0.98&lt;/td>
+&lt;td data-table-dtype="text">1.003&lt;/td>
+&lt;td data-table-dtype="text">0.998&lt;/td>
+&lt;td data-table-dtype="text">0.94&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">RF-D1&lt;/td>
-&lt;td data-table-dtype="text">0.80438009494998&lt;/td>
-&lt;td data-table-dtype="text">0.923937710910793&lt;/td>
-&lt;td data-table-dtype="text">0.970687452857236&lt;/td>
-&lt;td data-table-dtype="text">0.999046772796429&lt;/td>
-&lt;td data-table-dtype="text">1.00297955357299&lt;/td>
-&lt;td data-table-dtype="text">0.940206317017486&lt;/td>
+&lt;td data-table-dtype="text">0.804&lt;/td>
+&lt;td data-table-dtype="text">0.924&lt;/td>
+&lt;td data-table-dtype="text">0.971&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">1.003&lt;/td>
+&lt;td data-table-dtype="text">0.94&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Bag-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.816100084289783&lt;/td>
-&lt;td data-table-dtype="text">0.916795178324462&lt;/td>
-&lt;td data-table-dtype="text">0.97228929988643&lt;/td>
-&lt;td data-table-dtype="text">1.00474360092031&lt;/td>
-&lt;td data-table-dtype="text">0.992709161210642&lt;/td>
-&lt;td data-table-dtype="text">0.940527464926325&lt;/td>
+&lt;td data-table-dtype="text">0.816&lt;/td>
+&lt;td data-table-dtype="text">0.917&lt;/td>
+&lt;td data-table-dtype="text">0.972&lt;/td>
+&lt;td data-table-dtype="text">1.005&lt;/td>
+&lt;td data-table-dtype="text">0.993&lt;/td>
+&lt;td data-table-dtype="text">0.941&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">EN-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.816464365048841&lt;/td>
-&lt;td data-table-dtype="text">0.920909362792039&lt;/td>
-&lt;td data-table-dtype="text">0.968742786677224&lt;/td>
-&lt;td data-table-dtype="text">0.999103463669106&lt;/td>
-&lt;td data-table-dtype="text">1.00079193232798&lt;/td>
-&lt;td data-table-dtype="text">0.941202382103038&lt;/td>
+&lt;td data-table-dtype="text">0.816&lt;/td>
+&lt;td data-table-dtype="text">0.921&lt;/td>
+&lt;td data-table-dtype="text">0.969&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.941&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">EN-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.799285066126095&lt;/td>
-&lt;td data-table-dtype="text">0.927502744000968&lt;/td>
-&lt;td data-table-dtype="text">0.978233177433903&lt;/td>
-&lt;td data-table-dtype="text">1.0010601171938&lt;/td>
-&lt;td data-table-dtype="text">1.00003390810263&lt;/td>
-&lt;td data-table-dtype="text">0.941223002571478&lt;/td>
+&lt;td data-table-dtype="text">0.799&lt;/td>
+&lt;td data-table-dtype="text">0.928&lt;/td>
+&lt;td data-table-dtype="text">0.978&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">0.941&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">SVR-D3&lt;/td>
-&lt;td data-table-dtype="text">0.827221935090654&lt;/td>
-&lt;td data-table-dtype="text">0.919765477461636&lt;/td>
-&lt;td data-table-dtype="text">0.969688804967961&lt;/td>
-&lt;td data-table-dtype="text">0.994715030956218&lt;/td>
-&lt;td data-table-dtype="text">0.997330431480195&lt;/td>
-&lt;td data-table-dtype="text">0.941744335991333&lt;/td>
+&lt;td data-table-dtype="text">0.827&lt;/td>
+&lt;td data-table-dtype="text">0.92&lt;/td>
+&lt;td data-table-dtype="text">0.97&lt;/td>
+&lt;td data-table-dtype="text">0.995&lt;/td>
+&lt;td data-table-dtype="text">0.997&lt;/td>
+&lt;td data-table-dtype="text">0.942&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">RF-D3&lt;/td>
-&lt;td data-table-dtype="text">0.812312636502869&lt;/td>
-&lt;td data-table-dtype="text">0.935631641382958&lt;/td>
-&lt;td data-table-dtype="text">0.969247467439963&lt;/td>
-&lt;td data-table-dtype="text">0.993772069668322&lt;/td>
-&lt;td data-table-dtype="text">1.00093591448993&lt;/td>
-&lt;td data-table-dtype="text">0.942379945896809&lt;/td>
+&lt;td data-table-dtype="text">0.812&lt;/td>
+&lt;td data-table-dtype="text">0.936&lt;/td>
+&lt;td data-table-dtype="text">0.969&lt;/td>
+&lt;td data-table-dtype="text">0.994&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.942&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">ARDI(1)&lt;/td>
-&lt;td data-table-dtype="text">0.79934513886139&lt;/td>
-&lt;td data-table-dtype="text">0.939342178869088&lt;/td>
-&lt;td data-table-dtype="text">0.974569290809895&lt;/td>
-&lt;td data-table-dtype="text">0.998849704336268&lt;/td>
-&lt;td data-table-dtype="text">1.00081739331235&lt;/td>
-&lt;td data-table-dtype="text">0.942584741237798&lt;/td>
+&lt;td data-table-dtype="text">0.799&lt;/td>
+&lt;td data-table-dtype="text">0.939&lt;/td>
+&lt;td data-table-dtype="text">0.975&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.943&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">CBoost-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.821454154285997&lt;/td>
-&lt;td data-table-dtype="text">0.919805644040688&lt;/td>
-&lt;td data-table-dtype="text">0.965302440460929&lt;/td>
-&lt;td data-table-dtype="text">0.998848939556924&lt;/td>
-&lt;td data-table-dtype="text">1.00807875918137&lt;/td>
-&lt;td data-table-dtype="text">0.942697987505181&lt;/td>
+&lt;td data-table-dtype="text">0.821&lt;/td>
+&lt;td data-table-dtype="text">0.92&lt;/td>
+&lt;td data-table-dtype="text">0.965&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">1.008&lt;/td>
+&lt;td data-table-dtype="text">0.943&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BBoost-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.836416334314133&lt;/td>
-&lt;td data-table-dtype="text">0.911570958742831&lt;/td>
-&lt;td data-table-dtype="text">0.967410391353516&lt;/td>
-&lt;td data-table-dtype="text">0.998013129378196&lt;/td>
-&lt;td data-table-dtype="text">1.00017199153888&lt;/td>
-&lt;td data-table-dtype="text">0.94271656106551&lt;/td>
+&lt;td data-table-dtype="text">0.836&lt;/td>
+&lt;td data-table-dtype="text">0.912&lt;/td>
+&lt;td data-table-dtype="text">0.967&lt;/td>
+&lt;td data-table-dtype="text">0.998&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">0.943&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">SVR-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.831059195027836&lt;/td>
-&lt;td data-table-dtype="text">0.914374599733684&lt;/td>
-&lt;td data-table-dtype="text">0.972271680480814&lt;/td>
-&lt;td data-table-dtype="text">0.99520005848819&lt;/td>
-&lt;td data-table-dtype="text">1.00125494265&lt;/td>
-&lt;td data-table-dtype="text">0.942832095276105&lt;/td>
+&lt;td data-table-dtype="text">0.831&lt;/td>
+&lt;td data-table-dtype="text">0.914&lt;/td>
+&lt;td data-table-dtype="text">0.972&lt;/td>
+&lt;td data-table-dtype="text">0.995&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.943&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">SVR-D2&lt;/td>
-&lt;td data-table-dtype="text">0.827797431898846&lt;/td>
-&lt;td data-table-dtype="text">0.9231664874498&lt;/td>
-&lt;td data-table-dtype="text">0.970719286760149&lt;/td>
-&lt;td data-table-dtype="text">0.9965718541216&lt;/td>
-&lt;td data-table-dtype="text">0.997070481817629&lt;/td>
-&lt;td data-table-dtype="text">0.943065108409605&lt;/td>
+&lt;td data-table-dtype="text">0.828&lt;/td>
+&lt;td data-table-dtype="text">0.923&lt;/td>
+&lt;td data-table-dtype="text">0.971&lt;/td>
+&lt;td data-table-dtype="text">0.997&lt;/td>
+&lt;td data-table-dtype="text">0.997&lt;/td>
+&lt;td data-table-dtype="text">0.943&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AdaEN-D2&lt;/td>
-&lt;td data-table-dtype="text">0.765825830054528&lt;/td>
-&lt;td data-table-dtype="text">0.946865828902226&lt;/td>
-&lt;td data-table-dtype="text">0.976526045992749&lt;/td>
-&lt;td data-table-dtype="text">1.00267535441527&lt;/td>
-&lt;td data-table-dtype="text">1.02403801623143&lt;/td>
-&lt;td data-table-dtype="text">0.94318621511924&lt;/td>
+&lt;td data-table-dtype="text">0.766&lt;/td>
+&lt;td data-table-dtype="text">0.947&lt;/td>
+&lt;td data-table-dtype="text">0.977&lt;/td>
+&lt;td data-table-dtype="text">1.003&lt;/td>
+&lt;td data-table-dtype="text">1.024&lt;/td>
+&lt;td data-table-dtype="text">0.943&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">EN-D2&lt;/td>
-&lt;td data-table-dtype="text">0.776632905336791&lt;/td>
-&lt;td data-table-dtype="text">0.971205653787319&lt;/td>
-&lt;td data-table-dtype="text">0.977930599185636&lt;/td>
-&lt;td data-table-dtype="text">0.996368912163474&lt;/td>
-&lt;td data-table-dtype="text">0.994256484337158&lt;/td>
-&lt;td data-table-dtype="text">0.943278910962075&lt;/td>
+&lt;td data-table-dtype="text">0.777&lt;/td>
+&lt;td data-table-dtype="text">0.971&lt;/td>
+&lt;td data-table-dtype="text">0.978&lt;/td>
+&lt;td data-table-dtype="text">0.996&lt;/td>
+&lt;td data-table-dtype="text">0.994&lt;/td>
+&lt;td data-table-dtype="text">0.943&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">RF-D2&lt;/td>
-&lt;td data-table-dtype="text">0.81559527523812&lt;/td>
-&lt;td data-table-dtype="text">0.925260497384121&lt;/td>
-&lt;td data-table-dtype="text">0.975822304857112&lt;/td>
-&lt;td data-table-dtype="text">1.00066015686294&lt;/td>
-&lt;td data-table-dtype="text">1.00002184206659&lt;/td>
-&lt;td data-table-dtype="text">0.943472015281775&lt;/td>
+&lt;td data-table-dtype="text">0.816&lt;/td>
+&lt;td data-table-dtype="text">0.925&lt;/td>
+&lt;td data-table-dtype="text">0.976&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">0.943&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">LASSO-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.831264601041464&lt;/td>
-&lt;td data-table-dtype="text">0.920022142455046&lt;/td>
-&lt;td data-table-dtype="text">0.969180877921869&lt;/td>
-&lt;td data-table-dtype="text">0.997640099028626&lt;/td>
-&lt;td data-table-dtype="text">0.999571900887555&lt;/td>
-&lt;td data-table-dtype="text">0.943535924266912&lt;/td>
+&lt;td data-table-dtype="text">0.831&lt;/td>
+&lt;td data-table-dtype="text">0.92&lt;/td>
+&lt;td data-table-dtype="text">0.969&lt;/td>
+&lt;td data-table-dtype="text">0.998&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">0.944&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AdaEN-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.802134620461185&lt;/td>
-&lt;td data-table-dtype="text">0.933504531495069&lt;/td>
-&lt;td data-table-dtype="text">0.981032152295892&lt;/td>
-&lt;td data-table-dtype="text">1.0020541543403&lt;/td>
-&lt;td data-table-dtype="text">0.999644729736125&lt;/td>
-&lt;td data-table-dtype="text">0.943674037665713&lt;/td>
+&lt;td data-table-dtype="text">0.802&lt;/td>
+&lt;td data-table-dtype="text">0.934&lt;/td>
+&lt;td data-table-dtype="text">0.981&lt;/td>
+&lt;td data-table-dtype="text">1.002&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">0.944&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">SVR-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.826862559910446&lt;/td>
-&lt;td data-table-dtype="text">0.92118449229787&lt;/td>
-&lt;td data-table-dtype="text">0.971461818320642&lt;/td>
-&lt;td data-table-dtype="text">0.998568719103404&lt;/td>
-&lt;td data-table-dtype="text">1.00048836223792&lt;/td>
-&lt;td data-table-dtype="text">0.943713190374057&lt;/td>
+&lt;td data-table-dtype="text">0.827&lt;/td>
+&lt;td data-table-dtype="text">0.921&lt;/td>
+&lt;td data-table-dtype="text">0.971&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">0.944&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">CSR-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.824088149964711&lt;/td>
-&lt;td data-table-dtype="text">0.928100278586829&lt;/td>
-&lt;td data-table-dtype="text">0.970008813061911&lt;/td>
-&lt;td data-table-dtype="text">0.997093658374415&lt;/td>
-&lt;td data-table-dtype="text">0.999888501667103&lt;/td>
-&lt;td data-table-dtype="text">0.943835880330994&lt;/td>
+&lt;td data-table-dtype="text">0.824&lt;/td>
+&lt;td data-table-dtype="text">0.928&lt;/td>
+&lt;td data-table-dtype="text">0.97&lt;/td>
+&lt;td data-table-dtype="text">0.997&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">0.944&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">SVR-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.831129669270594&lt;/td>
-&lt;td data-table-dtype="text">0.92457506546586&lt;/td>
-&lt;td data-table-dtype="text">0.972228560300211&lt;/td>
-&lt;td data-table-dtype="text">0.996055937838391&lt;/td>
-&lt;td data-table-dtype="text">0.995281882053278&lt;/td>
-&lt;td data-table-dtype="text">0.943854222985667&lt;/td>
+&lt;td data-table-dtype="text">0.831&lt;/td>
+&lt;td data-table-dtype="text">0.925&lt;/td>
+&lt;td data-table-dtype="text">0.972&lt;/td>
+&lt;td data-table-dtype="text">0.996&lt;/td>
+&lt;td data-table-dtype="text">0.995&lt;/td>
+&lt;td data-table-dtype="text">0.944&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">RF-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.826987618438805&lt;/td>
-&lt;td data-table-dtype="text">0.928914217373298&lt;/td>
-&lt;td data-table-dtype="text">0.971674463742516&lt;/td>
-&lt;td data-table-dtype="text">0.99774044874009&lt;/td>
-&lt;td data-table-dtype="text">0.994787876056765&lt;/td>
-&lt;td data-table-dtype="text">0.944020924870295&lt;/td>
+&lt;td data-table-dtype="text">0.827&lt;/td>
+&lt;td data-table-dtype="text">0.929&lt;/td>
+&lt;td data-table-dtype="text">0.972&lt;/td>
+&lt;td data-table-dtype="text">0.998&lt;/td>
+&lt;td data-table-dtype="text">0.995&lt;/td>
+&lt;td data-table-dtype="text">0.944&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BTree-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.811312611876265&lt;/td>
-&lt;td data-table-dtype="text">0.923304985724509&lt;/td>
-&lt;td data-table-dtype="text">0.975264142885423&lt;/td>
-&lt;td data-table-dtype="text">1.00247900646089&lt;/td>
-&lt;td data-table-dtype="text">1.00791885722359&lt;/td>
-&lt;td data-table-dtype="text">0.944055920834134&lt;/td>
+&lt;td data-table-dtype="text">0.811&lt;/td>
+&lt;td data-table-dtype="text">0.923&lt;/td>
+&lt;td data-table-dtype="text">0.975&lt;/td>
+&lt;td data-table-dtype="text">1.002&lt;/td>
+&lt;td data-table-dtype="text">1.008&lt;/td>
+&lt;td data-table-dtype="text">0.944&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AdaEN-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.833555319525817&lt;/td>
-&lt;td data-table-dtype="text">0.926269413506121&lt;/td>
-&lt;td data-table-dtype="text">0.964829116932856&lt;/td>
-&lt;td data-table-dtype="text">0.998940087173867&lt;/td>
-&lt;td data-table-dtype="text">1.00193510091515&lt;/td>
-&lt;td data-table-dtype="text">0.945105807610762&lt;/td>
+&lt;td data-table-dtype="text">0.834&lt;/td>
+&lt;td data-table-dtype="text">0.926&lt;/td>
+&lt;td data-table-dtype="text">0.965&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">1.002&lt;/td>
+&lt;td data-table-dtype="text">0.945&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AdaLASSO-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.839785730132218&lt;/td>
-&lt;td data-table-dtype="text">0.922238213460847&lt;/td>
-&lt;td data-table-dtype="text">0.965624303079236&lt;/td>
-&lt;td data-table-dtype="text">0.998306344027935&lt;/td>
-&lt;td data-table-dtype="text">1.00105634663781&lt;/td>
-&lt;td data-table-dtype="text">0.94540218746761&lt;/td>
+&lt;td data-table-dtype="text">0.84&lt;/td>
+&lt;td data-table-dtype="text">0.922&lt;/td>
+&lt;td data-table-dtype="text">0.966&lt;/td>
+&lt;td data-table-dtype="text">0.998&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.945&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AdaLASSO-D2&lt;/td>
-&lt;td data-table-dtype="text">0.764898663931414&lt;/td>
-&lt;td data-table-dtype="text">0.954119088694757&lt;/td>
-&lt;td data-table-dtype="text">0.978843404889248&lt;/td>
-&lt;td data-table-dtype="text">0.997826397851449&lt;/td>
-&lt;td data-table-dtype="text">1.03395049726353&lt;/td>
-&lt;td data-table-dtype="text">0.945927610526079&lt;/td>
+&lt;td data-table-dtype="text">0.765&lt;/td>
+&lt;td data-table-dtype="text">0.954&lt;/td>
+&lt;td data-table-dtype="text">0.979&lt;/td>
+&lt;td data-table-dtype="text">0.998&lt;/td>
+&lt;td data-table-dtype="text">1.034&lt;/td>
+&lt;td data-table-dtype="text">0.946&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">LSTM-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.84543186615528&lt;/td>
-&lt;td data-table-dtype="text">0.917620222427029&lt;/td>
-&lt;td data-table-dtype="text">0.967919937282982&lt;/td>
-&lt;td data-table-dtype="text">1.00498546788876&lt;/td>
-&lt;td data-table-dtype="text">0.993775642780827&lt;/td>
-&lt;td data-table-dtype="text">0.945946627306976&lt;/td>
+&lt;td data-table-dtype="text">0.845&lt;/td>
+&lt;td data-table-dtype="text">0.918&lt;/td>
+&lt;td data-table-dtype="text">0.968&lt;/td>
+&lt;td data-table-dtype="text">1.005&lt;/td>
+&lt;td data-table-dtype="text">0.994&lt;/td>
+&lt;td data-table-dtype="text">0.946&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">ARDI(2)&lt;/td>
-&lt;td data-table-dtype="text">0.798175846801286&lt;/td>
-&lt;td data-table-dtype="text">0.946817509793516&lt;/td>
-&lt;td data-table-dtype="text">0.977907521201455&lt;/td>
-&lt;td data-table-dtype="text">1.000913954537&lt;/td>
-&lt;td data-table-dtype="text">1.00835956501727&lt;/td>
-&lt;td data-table-dtype="text">0.946434879470105&lt;/td>
+&lt;td data-table-dtype="text">0.798&lt;/td>
+&lt;td data-table-dtype="text">0.947&lt;/td>
+&lt;td data-table-dtype="text">0.978&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">1.008&lt;/td>
+&lt;td data-table-dtype="text">0.946&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">EN-D3&lt;/td>
-&lt;td data-table-dtype="text">0.833775080561525&lt;/td>
-&lt;td data-table-dtype="text">0.923516355638086&lt;/td>
-&lt;td data-table-dtype="text">0.975145740234404&lt;/td>
-&lt;td data-table-dtype="text">0.999740994967258&lt;/td>
-&lt;td data-table-dtype="text">1.00047015073365&lt;/td>
-&lt;td data-table-dtype="text">0.946529664426985&lt;/td>
+&lt;td data-table-dtype="text">0.834&lt;/td>
+&lt;td data-table-dtype="text">0.924&lt;/td>
+&lt;td data-table-dtype="text">0.975&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">0.947&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">CSR-D3&lt;/td>
-&lt;td data-table-dtype="text">0.813837546110864&lt;/td>
-&lt;td data-table-dtype="text">0.931409476765356&lt;/td>
-&lt;td data-table-dtype="text">0.980294935291871&lt;/td>
-&lt;td data-table-dtype="text">1.00457525339305&lt;/td>
-&lt;td data-table-dtype="text">1.0027714784932&lt;/td>
-&lt;td data-table-dtype="text">0.946577738010869&lt;/td>
+&lt;td data-table-dtype="text">0.814&lt;/td>
+&lt;td data-table-dtype="text">0.931&lt;/td>
+&lt;td data-table-dtype="text">0.98&lt;/td>
+&lt;td data-table-dtype="text">1.005&lt;/td>
+&lt;td data-table-dtype="text">1.003&lt;/td>
+&lt;td data-table-dtype="text">0.947&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">RW&lt;/td>
-&lt;td data-table-dtype="text">0.838581724807954&lt;/td>
-&lt;td data-table-dtype="text">0.921225136302331&lt;/td>
-&lt;td data-table-dtype="text">0.975067016483639&lt;/td>
-&lt;td data-table-dtype="text">0.999434782254417&lt;/td>
-&lt;td data-table-dtype="text">0.999476166070226&lt;/td>
-&lt;td data-table-dtype="text">0.946756965183713&lt;/td>
+&lt;td data-table-dtype="text">0.839&lt;/td>
+&lt;td data-table-dtype="text">0.921&lt;/td>
+&lt;td data-table-dtype="text">0.975&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">0.947&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">LSTM-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.844420163800468&lt;/td>
-&lt;td data-table-dtype="text">0.92805556566317&lt;/td>
-&lt;td data-table-dtype="text">0.966050618815734&lt;/td>
-&lt;td data-table-dtype="text">0.999597719946871&lt;/td>
-&lt;td data-table-dtype="text">0.996760897576903&lt;/td>
-&lt;td data-table-dtype="text">0.946976993160629&lt;/td>
+&lt;td data-table-dtype="text">0.844&lt;/td>
+&lt;td data-table-dtype="text">0.928&lt;/td>
+&lt;td data-table-dtype="text">0.966&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">0.997&lt;/td>
+&lt;td data-table-dtype="text">0.947&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">LASSO-D2&lt;/td>
-&lt;td data-table-dtype="text">0.780168312429594&lt;/td>
-&lt;td data-table-dtype="text">0.979604682033833&lt;/td>
-&lt;td data-table-dtype="text">0.982957216981092&lt;/td>
-&lt;td data-table-dtype="text">0.999631650988595&lt;/td>
-&lt;td data-table-dtype="text">0.996603688753286&lt;/td>
-&lt;td data-table-dtype="text">0.94779311023728&lt;/td>
+&lt;td data-table-dtype="text">0.78&lt;/td>
+&lt;td data-table-dtype="text">0.98&lt;/td>
+&lt;td data-table-dtype="text">0.983&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">0.997&lt;/td>
+&lt;td data-table-dtype="text">0.948&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BVAR-CSV&lt;/td>
-&lt;td data-table-dtype="text">0.810780482468663&lt;/td>
-&lt;td data-table-dtype="text">0.925536667961337&lt;/td>
-&lt;td data-table-dtype="text">0.979830177338485&lt;/td>
-&lt;td data-table-dtype="text">1.01161083554533&lt;/td>
-&lt;td data-table-dtype="text">1.01286595802444&lt;/td>
-&lt;td data-table-dtype="text">0.948124824267652&lt;/td>
+&lt;td data-table-dtype="text">0.811&lt;/td>
+&lt;td data-table-dtype="text">0.926&lt;/td>
+&lt;td data-table-dtype="text">0.98&lt;/td>
+&lt;td data-table-dtype="text">1.012&lt;/td>
+&lt;td data-table-dtype="text">1.013&lt;/td>
+&lt;td data-table-dtype="text">0.948&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">RF-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.844491812622079&lt;/td>
-&lt;td data-table-dtype="text">0.934134620131965&lt;/td>
-&lt;td data-table-dtype="text">0.975843252795674&lt;/td>
-&lt;td data-table-dtype="text">0.990947994484055&lt;/td>
-&lt;td data-table-dtype="text">1.00105013367766&lt;/td>
-&lt;td data-table-dtype="text">0.949293562742288&lt;/td>
+&lt;td data-table-dtype="text">0.844&lt;/td>
+&lt;td data-table-dtype="text">0.934&lt;/td>
+&lt;td data-table-dtype="text">0.976&lt;/td>
+&lt;td data-table-dtype="text">0.991&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.949&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">T.ARDI(1)&lt;/td>
-&lt;td data-table-dtype="text">0.813767631622494&lt;/td>
-&lt;td data-table-dtype="text">0.948318305297432&lt;/td>
-&lt;td data-table-dtype="text">0.9750983137938&lt;/td>
-&lt;td data-table-dtype="text">1.00465606934301&lt;/td>
-&lt;td data-table-dtype="text">1.00679878730208&lt;/td>
-&lt;td data-table-dtype="text">0.949727821471763&lt;/td>
+&lt;td data-table-dtype="text">0.814&lt;/td>
+&lt;td data-table-dtype="text">0.948&lt;/td>
+&lt;td data-table-dtype="text">0.975&lt;/td>
+&lt;td data-table-dtype="text">1.005&lt;/td>
+&lt;td data-table-dtype="text">1.007&lt;/td>
+&lt;td data-table-dtype="text">0.95&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AdaEN-D1&lt;/td>
-&lt;td data-table-dtype="text">0.816658339902044&lt;/td>
-&lt;td data-table-dtype="text">0.930646607864529&lt;/td>
-&lt;td data-table-dtype="text">0.991426142008652&lt;/td>
-&lt;td data-table-dtype="text">1.00729087146933&lt;/td>
-&lt;td data-table-dtype="text">1.00268584956679&lt;/td>
-&lt;td data-table-dtype="text">0.94974156216227&lt;/td>
+&lt;td data-table-dtype="text">0.817&lt;/td>
+&lt;td data-table-dtype="text">0.931&lt;/td>
+&lt;td data-table-dtype="text">0.991&lt;/td>
+&lt;td data-table-dtype="text">1.007&lt;/td>
+&lt;td data-table-dtype="text">1.003&lt;/td>
+&lt;td data-table-dtype="text">0.95&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BBoost-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.865336072359671&lt;/td>
-&lt;td data-table-dtype="text">0.906212422880481&lt;/td>
-&lt;td data-table-dtype="text">0.972547924379895&lt;/td>
-&lt;td data-table-dtype="text">1.00550675232473&lt;/td>
-&lt;td data-table-dtype="text">1.00148666653085&lt;/td>
-&lt;td data-table-dtype="text">0.950217967695126&lt;/td>
+&lt;td data-table-dtype="text">0.865&lt;/td>
+&lt;td data-table-dtype="text">0.906&lt;/td>
+&lt;td data-table-dtype="text">0.973&lt;/td>
+&lt;td data-table-dtype="text">1.006&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.95&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AdaEN-D3&lt;/td>
-&lt;td data-table-dtype="text">0.847726906054347&lt;/td>
-&lt;td data-table-dtype="text">0.927748796392819&lt;/td>
-&lt;td data-table-dtype="text">0.975534723225869&lt;/td>
-&lt;td data-table-dtype="text">0.999737027400192&lt;/td>
-&lt;td data-table-dtype="text">1.00175491124003&lt;/td>
-&lt;td data-table-dtype="text">0.950500472862651&lt;/td>
+&lt;td data-table-dtype="text">0.848&lt;/td>
+&lt;td data-table-dtype="text">0.928&lt;/td>
+&lt;td data-table-dtype="text">0.976&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">1.002&lt;/td>
+&lt;td data-table-dtype="text">0.951&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">LSTM-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.851167870114729&lt;/td>
-&lt;td data-table-dtype="text">0.926320278305051&lt;/td>
-&lt;td data-table-dtype="text">0.972143020038868&lt;/td>
-&lt;td data-table-dtype="text">0.99370854481173&lt;/td>
-&lt;td data-table-dtype="text">1.01265350458247&lt;/td>
-&lt;td data-table-dtype="text">0.95119864357057&lt;/td>
+&lt;td data-table-dtype="text">0.851&lt;/td>
+&lt;td data-table-dtype="text">0.926&lt;/td>
+&lt;td data-table-dtype="text">0.972&lt;/td>
+&lt;td data-table-dtype="text">0.994&lt;/td>
+&lt;td data-table-dtype="text">1.013&lt;/td>
+&lt;td data-table-dtype="text">0.951&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">SgLASSO-D3&lt;/td>
-&lt;td data-table-dtype="text">0.849048905187828&lt;/td>
-&lt;td data-table-dtype="text">0.924516033556406&lt;/td>
-&lt;td data-table-dtype="text">0.977688576497845&lt;/td>
-&lt;td data-table-dtype="text">1.00323923392565&lt;/td>
-&lt;td data-table-dtype="text">1.00484616651545&lt;/td>
-&lt;td data-table-dtype="text">0.951867783136636&lt;/td>
+&lt;td data-table-dtype="text">0.849&lt;/td>
+&lt;td data-table-dtype="text">0.925&lt;/td>
+&lt;td data-table-dtype="text">0.978&lt;/td>
+&lt;td data-table-dtype="text">1.003&lt;/td>
+&lt;td data-table-dtype="text">1.005&lt;/td>
+&lt;td data-table-dtype="text">0.952&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">SgLASSO-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.860611894647891&lt;/td>
-&lt;td data-table-dtype="text">0.911899469445898&lt;/td>
-&lt;td data-table-dtype="text">0.976772836507864&lt;/td>
-&lt;td data-table-dtype="text">1.01103615121569&lt;/td>
-&lt;td data-table-dtype="text">1.00332228385609&lt;/td>
-&lt;td data-table-dtype="text">0.952728527134687&lt;/td>
+&lt;td data-table-dtype="text">0.861&lt;/td>
+&lt;td data-table-dtype="text">0.912&lt;/td>
+&lt;td data-table-dtype="text">0.977&lt;/td>
+&lt;td data-table-dtype="text">1.011&lt;/td>
+&lt;td data-table-dtype="text">1.003&lt;/td>
+&lt;td data-table-dtype="text">0.953&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">CSR-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.876563839748016&lt;/td>
-&lt;td data-table-dtype="text">0.92483096201205&lt;/td>
-&lt;td data-table-dtype="text">0.970492142678255&lt;/td>
-&lt;td data-table-dtype="text">0.99825394379491&lt;/td>
-&lt;td data-table-dtype="text">0.998576173233821&lt;/td>
-&lt;td data-table-dtype="text">0.953743412293411&lt;/td>
+&lt;td data-table-dtype="text">0.877&lt;/td>
+&lt;td data-table-dtype="text">0.925&lt;/td>
+&lt;td data-table-dtype="text">0.97&lt;/td>
+&lt;td data-table-dtype="text">0.998&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">0.954&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">EN-D1&lt;/td>
-&lt;td data-table-dtype="text">0.808901554692812&lt;/td>
-&lt;td data-table-dtype="text">0.93594808698153&lt;/td>
-&lt;td data-table-dtype="text">0.944061611445234&lt;/td>
-&lt;td data-table-dtype="text">1.04454774877961&lt;/td>
-&lt;td data-table-dtype="text">1.03558724185353&lt;/td>
-&lt;td data-table-dtype="text">0.953809248750542&lt;/td>
+&lt;td data-table-dtype="text">0.809&lt;/td>
+&lt;td data-table-dtype="text">0.936&lt;/td>
+&lt;td data-table-dtype="text">0.944&lt;/td>
+&lt;td data-table-dtype="text">1.045&lt;/td>
+&lt;td data-table-dtype="text">1.036&lt;/td>
+&lt;td data-table-dtype="text">0.954&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BTree-D1&lt;/td>
-&lt;td data-table-dtype="text">0.811928689979658&lt;/td>
-&lt;td data-table-dtype="text">0.933202274707267&lt;/td>
-&lt;td data-table-dtype="text">0.988109853341928&lt;/td>
-&lt;td data-table-dtype="text">1.01491929260013&lt;/td>
-&lt;td data-table-dtype="text">1.02441309111548&lt;/td>
-&lt;td data-table-dtype="text">0.954514640348893&lt;/td>
+&lt;td data-table-dtype="text">0.812&lt;/td>
+&lt;td data-table-dtype="text">0.933&lt;/td>
+&lt;td data-table-dtype="text">0.988&lt;/td>
+&lt;td data-table-dtype="text">1.015&lt;/td>
+&lt;td data-table-dtype="text">1.024&lt;/td>
+&lt;td data-table-dtype="text">0.955&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AdaEN-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.88262458868815&lt;/td>
-&lt;td data-table-dtype="text">0.923861907868804&lt;/td>
-&lt;td data-table-dtype="text">0.968225026496494&lt;/td>
-&lt;td data-table-dtype="text">1.00102822766571&lt;/td>
-&lt;td data-table-dtype="text">0.999025758821397&lt;/td>
-&lt;td data-table-dtype="text">0.954953101908112&lt;/td>
+&lt;td data-table-dtype="text">0.883&lt;/td>
+&lt;td data-table-dtype="text">0.924&lt;/td>
+&lt;td data-table-dtype="text">0.968&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">0.955&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">LSTM-D3&lt;/td>
-&lt;td data-table-dtype="text">0.858260771734783&lt;/td>
-&lt;td data-table-dtype="text">0.93197003538244&lt;/td>
-&lt;td data-table-dtype="text">0.977515034396616&lt;/td>
-&lt;td data-table-dtype="text">1.00532370745053&lt;/td>
-&lt;td data-table-dtype="text">1.00351910116704&lt;/td>
-&lt;td data-table-dtype="text">0.955317730026282&lt;/td>
+&lt;td data-table-dtype="text">0.858&lt;/td>
+&lt;td data-table-dtype="text">0.932&lt;/td>
+&lt;td data-table-dtype="text">0.978&lt;/td>
+&lt;td data-table-dtype="text">1.005&lt;/td>
+&lt;td data-table-dtype="text">1.004&lt;/td>
+&lt;td data-table-dtype="text">0.955&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BVAR-Minn&lt;/td>
-&lt;td data-table-dtype="text">0.850056191944553&lt;/td>
-&lt;td data-table-dtype="text">0.933102118289295&lt;/td>
-&lt;td data-table-dtype="text">0.973754833208903&lt;/td>
-&lt;td data-table-dtype="text">1.01239403074473&lt;/td>
-&lt;td data-table-dtype="text">1.01458079147139&lt;/td>
-&lt;td data-table-dtype="text">0.956777593131774&lt;/td>
+&lt;td data-table-dtype="text">0.85&lt;/td>
+&lt;td data-table-dtype="text">0.933&lt;/td>
+&lt;td data-table-dtype="text">0.974&lt;/td>
+&lt;td data-table-dtype="text">1.012&lt;/td>
+&lt;td data-table-dtype="text">1.015&lt;/td>
+&lt;td data-table-dtype="text">0.957&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">EN-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.890998766536911&lt;/td>
-&lt;td data-table-dtype="text">0.92579368834146&lt;/td>
-&lt;td data-table-dtype="text">0.971185441241413&lt;/td>
-&lt;td data-table-dtype="text">0.999906140278263&lt;/td>
-&lt;td data-table-dtype="text">0.999439638573219&lt;/td>
-&lt;td data-table-dtype="text">0.957464734994253&lt;/td>
+&lt;td data-table-dtype="text">0.891&lt;/td>
+&lt;td data-table-dtype="text">0.926&lt;/td>
+&lt;td data-table-dtype="text">0.971&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">0.957&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">CBoost-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.853883993988842&lt;/td>
-&lt;td data-table-dtype="text">0.93605562082667&lt;/td>
-&lt;td data-table-dtype="text">0.9845833304544&lt;/td>
-&lt;td data-table-dtype="text">1.01304478213284&lt;/td>
-&lt;td data-table-dtype="text">1.00089093068768&lt;/td>
-&lt;td data-table-dtype="text">0.957691731618088&lt;/td>
+&lt;td data-table-dtype="text">0.854&lt;/td>
+&lt;td data-table-dtype="text">0.936&lt;/td>
+&lt;td data-table-dtype="text">0.985&lt;/td>
+&lt;td data-table-dtype="text">1.013&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.958&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">LSTM-D1&lt;/td>
-&lt;td data-table-dtype="text">0.866113936143262&lt;/td>
-&lt;td data-table-dtype="text">0.935967281015055&lt;/td>
-&lt;td data-table-dtype="text">0.97778638196456&lt;/td>
-&lt;td data-table-dtype="text">1.0021098160706&lt;/td>
-&lt;td data-table-dtype="text">1.01340292008676&lt;/td>
-&lt;td data-table-dtype="text">0.959076067056048&lt;/td>
+&lt;td data-table-dtype="text">0.866&lt;/td>
+&lt;td data-table-dtype="text">0.936&lt;/td>
+&lt;td data-table-dtype="text">0.978&lt;/td>
+&lt;td data-table-dtype="text">1.002&lt;/td>
+&lt;td data-table-dtype="text">1.013&lt;/td>
+&lt;td data-table-dtype="text">0.959&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">CSR-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.889826927894386&lt;/td>
-&lt;td data-table-dtype="text">0.937928357555942&lt;/td>
-&lt;td data-table-dtype="text">0.970407860900295&lt;/td>
-&lt;td data-table-dtype="text">1.0013709673637&lt;/td>
-&lt;td data-table-dtype="text">0.99693215733281&lt;/td>
-&lt;td data-table-dtype="text">0.959293254209426&lt;/td>
+&lt;td data-table-dtype="text">0.89&lt;/td>
+&lt;td data-table-dtype="text">0.938&lt;/td>
+&lt;td data-table-dtype="text">0.97&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.997&lt;/td>
+&lt;td data-table-dtype="text">0.959&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">LASSO-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.903170226333011&lt;/td>
-&lt;td data-table-dtype="text">0.921452655638421&lt;/td>
-&lt;td data-table-dtype="text">0.971275433487264&lt;/td>
-&lt;td data-table-dtype="text">1.00038489082641&lt;/td>
-&lt;td data-table-dtype="text">1.00320461789681&lt;/td>
-&lt;td data-table-dtype="text">0.959897564836382&lt;/td>
+&lt;td data-table-dtype="text">0.903&lt;/td>
+&lt;td data-table-dtype="text">0.921&lt;/td>
+&lt;td data-table-dtype="text">0.971&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">1.003&lt;/td>
+&lt;td data-table-dtype="text">0.96&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AdaLASSO-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.893253008070758&lt;/td>
-&lt;td data-table-dtype="text">0.929049373597604&lt;/td>
-&lt;td data-table-dtype="text">0.971049811506319&lt;/td>
-&lt;td data-table-dtype="text">1.00253033352995&lt;/td>
-&lt;td data-table-dtype="text">1.00382712989223&lt;/td>
-&lt;td data-table-dtype="text">0.959941931319374&lt;/td>
+&lt;td data-table-dtype="text">0.893&lt;/td>
+&lt;td data-table-dtype="text">0.929&lt;/td>
+&lt;td data-table-dtype="text">0.971&lt;/td>
+&lt;td data-table-dtype="text">1.003&lt;/td>
+&lt;td data-table-dtype="text">1.004&lt;/td>
+&lt;td data-table-dtype="text">0.96&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BTree-D2F&lt;/td>
-&lt;td data-table-dtype="text">0.849992136933311&lt;/td>
-&lt;td data-table-dtype="text">0.953952572315558&lt;/td>
-&lt;td data-table-dtype="text">0.99144773994162&lt;/td>
-&lt;td data-table-dtype="text">1.01725247147362&lt;/td>
-&lt;td data-table-dtype="text">0.99695989671685&lt;/td>
-&lt;td data-table-dtype="text">0.961920963476192&lt;/td>
+&lt;td data-table-dtype="text">0.85&lt;/td>
+&lt;td data-table-dtype="text">0.954&lt;/td>
+&lt;td data-table-dtype="text">0.991&lt;/td>
+&lt;td data-table-dtype="text">1.017&lt;/td>
+&lt;td data-table-dtype="text">0.997&lt;/td>
+&lt;td data-table-dtype="text">0.962&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">LSTM-D2&lt;/td>
-&lt;td data-table-dtype="text">0.86769142189597&lt;/td>
-&lt;td data-table-dtype="text">0.943190009005604&lt;/td>
-&lt;td data-table-dtype="text">0.985507539102415&lt;/td>
-&lt;td data-table-dtype="text">1.01689833856156&lt;/td>
-&lt;td data-table-dtype="text">0.998994918838402&lt;/td>
-&lt;td data-table-dtype="text">0.962456445480791&lt;/td>
+&lt;td data-table-dtype="text">0.868&lt;/td>
+&lt;td data-table-dtype="text">0.943&lt;/td>
+&lt;td data-table-dtype="text">0.986&lt;/td>
+&lt;td data-table-dtype="text">1.017&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">0.962&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BTree-D2&lt;/td>
-&lt;td data-table-dtype="text">0.83901507363016&lt;/td>
-&lt;td data-table-dtype="text">0.951791692465079&lt;/td>
-&lt;td data-table-dtype="text">0.99416100659491&lt;/td>
-&lt;td data-table-dtype="text">1.01195692610285&lt;/td>
-&lt;td data-table-dtype="text">1.01628960891839&lt;/td>
-&lt;td data-table-dtype="text">0.962642861542278&lt;/td>
+&lt;td data-table-dtype="text">0.839&lt;/td>
+&lt;td data-table-dtype="text">0.952&lt;/td>
+&lt;td data-table-dtype="text">0.994&lt;/td>
+&lt;td data-table-dtype="text">1.012&lt;/td>
+&lt;td data-table-dtype="text">1.016&lt;/td>
+&lt;td data-table-dtype="text">0.963&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Ridge-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.802324555713755&lt;/td>
-&lt;td data-table-dtype="text">0.940514045016048&lt;/td>
-&lt;td data-table-dtype="text">1.01749032504786&lt;/td>
-&lt;td data-table-dtype="text">1.04636480193093&lt;/td>
-&lt;td data-table-dtype="text">1.03257307941066&lt;/td>
-&lt;td data-table-dtype="text">0.967853361423849&lt;/td>
+&lt;td data-table-dtype="text">0.802&lt;/td>
+&lt;td data-table-dtype="text">0.941&lt;/td>
+&lt;td data-table-dtype="text">1.017&lt;/td>
+&lt;td data-table-dtype="text">1.046&lt;/td>
+&lt;td data-table-dtype="text">1.033&lt;/td>
+&lt;td data-table-dtype="text">0.968&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AdaLASSO-D1&lt;/td>
-&lt;td data-table-dtype="text">0.829541379241073&lt;/td>
-&lt;td data-table-dtype="text">0.946659536424266&lt;/td>
-&lt;td data-table-dtype="text">1.01922776042162&lt;/td>
-&lt;td data-table-dtype="text">1.03744611258815&lt;/td>
-&lt;td data-table-dtype="text">1.02233884108172&lt;/td>
-&lt;td data-table-dtype="text">0.971042725951366&lt;/td>
+&lt;td data-table-dtype="text">0.83&lt;/td>
+&lt;td data-table-dtype="text">0.947&lt;/td>
+&lt;td data-table-dtype="text">1.019&lt;/td>
+&lt;td data-table-dtype="text">1.037&lt;/td>
+&lt;td data-table-dtype="text">1.022&lt;/td>
+&lt;td data-table-dtype="text">0.971&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BTree-D3&lt;/td>
-&lt;td data-table-dtype="text">0.851409958261356&lt;/td>
-&lt;td data-table-dtype="text">0.987819057529627&lt;/td>
-&lt;td data-table-dtype="text">0.99023882810392&lt;/td>
-&lt;td data-table-dtype="text">1.01613556830427&lt;/td>
-&lt;td data-table-dtype="text">1.02128939016279&lt;/td>
-&lt;td data-table-dtype="text">0.973378560472392&lt;/td>
+&lt;td data-table-dtype="text">0.851&lt;/td>
+&lt;td data-table-dtype="text">0.988&lt;/td>
+&lt;td data-table-dtype="text">0.99&lt;/td>
+&lt;td data-table-dtype="text">1.016&lt;/td>
+&lt;td data-table-dtype="text">1.021&lt;/td>
+&lt;td data-table-dtype="text">0.973&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Ridge-D1F&lt;/td>
-&lt;td data-table-dtype="text">0.778545842763171&lt;/td>
-&lt;td data-table-dtype="text">0.95944893270872&lt;/td>
-&lt;td data-table-dtype="text">1.0258212191622&lt;/td>
-&lt;td data-table-dtype="text">1.06007758824638&lt;/td>
-&lt;td data-table-dtype="text">1.05375280863434&lt;/td>
-&lt;td data-table-dtype="text">0.975529278302963&lt;/td>
+&lt;td data-table-dtype="text">0.779&lt;/td>
+&lt;td data-table-dtype="text">0.959&lt;/td>
+&lt;td data-table-dtype="text">1.026&lt;/td>
+&lt;td data-table-dtype="text">1.06&lt;/td>
+&lt;td data-table-dtype="text">1.054&lt;/td>
+&lt;td data-table-dtype="text">0.976&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">LASSO-D3&lt;/td>
-&lt;td data-table-dtype="text">0.831877224020084&lt;/td>
-&lt;td data-table-dtype="text">0.93217943936234&lt;/td>
-&lt;td data-table-dtype="text">1.0182514774495&lt;/td>
-&lt;td data-table-dtype="text">1.06004508408044&lt;/td>
-&lt;td data-table-dtype="text">1.05634503411034&lt;/td>
-&lt;td data-table-dtype="text">0.97973965180454&lt;/td>
+&lt;td data-table-dtype="text">0.832&lt;/td>
+&lt;td data-table-dtype="text">0.932&lt;/td>
+&lt;td data-table-dtype="text">1.018&lt;/td>
+&lt;td data-table-dtype="text">1.06&lt;/td>
+&lt;td data-table-dtype="text">1.056&lt;/td>
+&lt;td data-table-dtype="text">0.98&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AdaLASSO-D3&lt;/td>
-&lt;td data-table-dtype="text">0.833811896056004&lt;/td>
-&lt;td data-table-dtype="text">0.945292991656175&lt;/td>
-&lt;td data-table-dtype="text">1.03046919735918&lt;/td>
-&lt;td data-table-dtype="text">1.06491974611469&lt;/td>
-&lt;td data-table-dtype="text">1.05972928744455&lt;/td>
-&lt;td data-table-dtype="text">0.98684462372612&lt;/td>
+&lt;td data-table-dtype="text">0.834&lt;/td>
+&lt;td data-table-dtype="text">0.945&lt;/td>
+&lt;td data-table-dtype="text">1.03&lt;/td>
+&lt;td data-table-dtype="text">1.065&lt;/td>
+&lt;td data-table-dtype="text">1.06&lt;/td>
+&lt;td data-table-dtype="text">0.987&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">LASSO-D1&lt;/td>
-&lt;td data-table-dtype="text">0.774317179454463&lt;/td>
-&lt;td data-table-dtype="text">1.00687599555564&lt;/td>
-&lt;td data-table-dtype="text">0.987150255448693&lt;/td>
-&lt;td data-table-dtype="text">1.10189839699888&lt;/td>
-&lt;td data-table-dtype="text">1.0735557342454&lt;/td>
-&lt;td data-table-dtype="text">0.988759512340616&lt;/td>
+&lt;td data-table-dtype="text">0.774&lt;/td>
+&lt;td data-table-dtype="text">1.007&lt;/td>
+&lt;td data-table-dtype="text">0.987&lt;/td>
+&lt;td data-table-dtype="text">1.102&lt;/td>
+&lt;td data-table-dtype="text">1.074&lt;/td>
+&lt;td data-table-dtype="text">0.989&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BTree-D3F&lt;/td>
-&lt;td data-table-dtype="text">0.879589378812693&lt;/td>
-&lt;td data-table-dtype="text">1.03065128093582&lt;/td>
-&lt;td data-table-dtype="text">0.999146029461657&lt;/td>
-&lt;td data-table-dtype="text">1.01033361176194&lt;/td>
-&lt;td data-table-dtype="text">1.03281182267413&lt;/td>
-&lt;td data-table-dtype="text">0.990506424729248&lt;/td>
+&lt;td data-table-dtype="text">0.88&lt;/td>
+&lt;td data-table-dtype="text">1.031&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">1.01&lt;/td>
+&lt;td data-table-dtype="text">1.033&lt;/td>
+&lt;td data-table-dtype="text">0.991&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AR(BIC)&lt;/td>
-&lt;td data-table-dtype="text">1.00791637902009&lt;/td>
-&lt;td data-table-dtype="text">1.00325153259991&lt;/td>
-&lt;td data-table-dtype="text">1.00040041536644&lt;/td>
-&lt;td data-table-dtype="text">1.0008322720581&lt;/td>
-&lt;td data-table-dtype="text">0.999728179711753&lt;/td>
-&lt;td data-table-dtype="text">1.00242575575126&lt;/td>
+&lt;td data-table-dtype="text">1.008&lt;/td>
+&lt;td data-table-dtype="text">1.003&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">1.002&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AR(CV)&lt;/td>
-&lt;td data-table-dtype="text">1.01970780662181&lt;/td>
-&lt;td data-table-dtype="text">1.00373264154207&lt;/td>
-&lt;td data-table-dtype="text">1.00034128399859&lt;/td>
-&lt;td data-table-dtype="text">1.00128857219709&lt;/td>
-&lt;td data-table-dtype="text">0.999346213749174&lt;/td>
-&lt;td data-table-dtype="text">1.00488330362175&lt;/td>
+&lt;td data-table-dtype="text">1.02&lt;/td>
+&lt;td data-table-dtype="text">1.004&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="text">1.001&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">1.005&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AR(4)&lt;/td>
-&lt;td data-table-dtype="text">1.04929781916048&lt;/td>
-&lt;td data-table-dtype="text">1.01668005579226&lt;/td>
-&lt;td data-table-dtype="text">1.00163515398249&lt;/td>
-&lt;td data-table-dtype="text">0.999319591513728&lt;/td>
-&lt;td data-table-dtype="text">0.999165018719216&lt;/td>
-&lt;td data-table-dtype="text">1.01321952783363&lt;/td>
+&lt;td data-table-dtype="text">1.049&lt;/td>
+&lt;td data-table-dtype="text">1.017&lt;/td>
+&lt;td data-table-dtype="text">1.002&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">0.999&lt;/td>
+&lt;td data-table-dtype="text">1.013&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">AR(1)&lt;/td>
@@ -1612,6 +1722,4 @@ style="border:none;">
 &lt;td data-table-dtype="text">NaN&lt;/td>
 &lt;td data-table-dtype="text">NaN&lt;/td>
 &lt;/tr>
-&lt;caption>Table: ML Results&lt;/caption>
-&lt;/table>
-&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/73.embed?show_link=false">&lt;/iframe></description></item></channel></rss>
+&lt;/table></description></item></channel></rss>
