@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-173984526" class="chart">&lt;/div>
+&lt;div id="chart-176853249" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-173984526', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-176853249', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -848,10 +848,7 @@ style="border:none;">
 &lt;li>Babii, A., Ghysels E., &amp;amp; Striaukas, J. (2022). &amp;ldquo;Machine learning time series regressions with an application to nowcasting.&amp;rdquo; Journal of Business &amp;amp; Economic Statistics, 40(3), 1094-1106.&lt;/li>
 &lt;li>Stock, J. H., &amp;amp; Watson, M. W. (2002). &amp;ldquo;Macroeconomic forecasting using diffusion indexes.&amp;rdquo; Journal of Business &amp;amp; Economic Statistics, 20(2), 147-162.&lt;/li>
 &lt;/ul>
-&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/73.embed?show_link=false">&lt;/iframe></description></item><item><title>The Big Macro Nowcasting Ranking</title><link>https://ckarag.github.io/bmnr/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/bmnr/</guid><description>&lt;p>A list of the indicators that compose the mixed-frequency dataset used in the performance evaluation, can be accessed
-&lt;a href="https://ckarag.github.io/research/datasetMF.csv" target="_blank">here.&lt;/a>
-&lt;/p>
-&lt;h3 id="list-of-forecasting-models">List of forecasting models&lt;/h3>
+&lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/73.embed?show_link=false">&lt;/iframe></description></item><item><title>The Big Macro Nowcasting Ranking</title><link>https://ckarag.github.io/bmnr/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/bmnr/</guid><description>&lt;h3 id="list-of-forecasting-models">List of forecasting models&lt;/h3>
 &lt;table class="table">
 &lt;tr> &lt;th>Acronym&lt;/th> &lt;th>Model Description&lt;/th> &lt;/tr>
 &lt;tr>
