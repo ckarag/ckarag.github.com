@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-839514627" class="chart">&lt;/div>
+&lt;div id="chart-524693178" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-839514627', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-524693178', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -646,10 +646,10 @@ An extensive collection of uniformly designed MATLAB functions developed for pre
 &lt;a href="https://github.com/jstriaukas/midasml_mat" target="_blank" rel="noopener">Download&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ul></description></item><item><title>M$ \alpha $cro Monitor</title><link>https://ckarag.github.io/rtmonitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/rtmonitor/</guid><description>&lt;p>The
-$ \alpha $4casting real-time M$ \alpha $cro Monitor uses state-of-the-art datasets and statistical models developed exclusively for macroeconomic nowcasting, allowing to closely and accurately monitor economic activity in real-time. The predictive and pre-processing models used to produce our nowcasts and forecasts, follow research that has been published in top academic journals (JBES, Econometrica to name a few) following the scientific developments in predictive macro modelling of the last couple of years. Our models are evaluated frequently against their competing alternatives to guarantee leading preformance among the industry.
+$ \alpha $4casting real-time M$ \alpha $cro Monitor uses state-of-the-art datasets and statistical models developed exclusively for macroeconomic nowcasting, allowing to closely and accurately monitor economic activity in real-time. The predictive and pre-processing models used to produce our nowcasts and forecasts, follow research that has been published in top academic journals (JBES, Econometrica to name a few) following the scientific developments in predictive macro modelling of the last couple of years. The models are evaluated frequently against their competing alternatives to guarantee leading preformance among the industry.
 The Macro Monitor avoids human judgment by operating entirely on a large pool of data released by official sources. Data are retreived from the U.S. Census Bureau, U.S. Bureau of Labor Statistics, and other sources. It is fully automated and the predictions are continuously updated in real-time as soon as new data releases become available, allowing to incorporate the latest market and economic developments, hence providing the most up-to-date views for the current and future states of the economies being monitored.&lt;/p>
 &lt;h3 id="us">US&lt;/h3>
-&lt;p>The graphs below show the weekly evolution of the nowcasts for the respective period, as models are updated each Friday to reflect newly released information from the preceding week. The realized figures (labelled as ‘Actual’) reflect the revisions from the official source made at the 2 most recent releases (as indicated by the ‘as of’ date in the hover-over text). Members subscribed to the newsletter can access the spreadsheets containing the latest nowcasts and forecasts as well as the full history of the projections &lt;a href="https://ckarag.github.io/uploads/US_d0.xlsx" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;p>The graphs below show the weekly evolution of the nowcasts for the respective period, as models are updated each Friday to reflect newly released information from the preceding week. The realized figures (labelled as ‘Actual’) reflect the revisions from the official source made at the 2 most recent releases (as indicated by the ‘as of’ date in the hover-over text). You can access the spreadsheets containing the latest nowcasts and forecasts as well as the full history of the projections &lt;a href="https://ckarag.github.io/uploads/US_d0.xlsx" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/89.embed?show_link=false">&lt;/iframe>
 &lt;table class="table">
 &lt;tr> &lt;th>Forecast Dates&lt;/th> &lt;th>2024Q2&lt;/th> &lt;th>2024Q3&lt;/th> &lt;th>2024Q4&lt;/th> &lt;/tr>
@@ -832,7 +832,8 @@ src="https://ckarag.github.io/MLinterpret_CPI.gif"
 width="800"
 height="550"
 style="border:none;">
-&lt;/iframe></description></item><item><title>Macro Nowcasting</title><link>https://ckarag.github.io/sota/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/sota/</guid><description>&lt;h3 id="nowcasting-with-state-of-the-art-methodologies">Nowcasting with State-of-the-Art Methodologies&lt;/h3>
+&lt;/iframe>
+&lt;p>&lt;font size=”1”> &lt;em>Disclaimer: The views expressed here are my own and do not reflect those of any institutions I am affiliated with.&lt;/em> &lt;/font>&lt;/p></description></item><item><title>Macro Nowcasting</title><link>https://ckarag.github.io/sota/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/sota/</guid><description>&lt;h3 id="nowcasting-with-state-of-the-art-methodologies">Nowcasting with State-of-the-Art Methodologies&lt;/h3>
 &lt;p>The purpose of the nowcasts in this section is not to give a single number, rather it is to give an indication of how well the latest research published in top academic journals, and highly cited methodologies for nowcasting, perform on a real-time basis.&lt;/p>
 &lt;p>The 1st two plots contain nowcasts based on two state-of-the-art nowcasting methodologies. The two methodologies are the &lt;em>Factor-augmented AR (FAR)&lt;/em> methodology of Stock-Watson (2002), and the &lt;em>Sg-LASSO-MIDAS&lt;/em> by Babii et al. (2022). The nowcasts at the last plot are based on the tutorial material I am teaching for the MSc course titled ‘Intro to Big Data Analytics’ at KCL. In the two plots at the top, all the simplifications made in the course are dropped.&lt;/p>
 &lt;p>The dataset is made of 160 carefully selected mixed-frequency indicators, that are updated on a timely basis (i.e. every time the nowcasts are re-run). As such, the nowcasts reflect the information contained in the latest released economic and market data, as of the day of the estimation (which can be seen by hovering over the corresponding points in the plots). The mixed-frequency panel of predictors contains weekly, daily, and monthly indicators. The series that is nowcasted is the annualized MoM% headline CPI for the US (FRED mnemonic: &lt;a href="https://fred.stlouisfed.org/series/CPIAUCSL" target="_blank" rel="noopener">CPIAUCSL&lt;/a>).&lt;/p>
