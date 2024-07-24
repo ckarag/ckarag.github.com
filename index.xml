@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-953426781" class="chart">&lt;/div>
+&lt;div id="chart-839514627" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-953426781', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-839514627', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -1722,7 +1722,7 @@ style="border:none;">
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt="Image alt" srcset="
+&lt;div class="w-100" >&lt;img alt="Forecasting Performance by Transformation" srcset="
 /bmnr/images/sEM_all_hu14ebbebfb20c34b53f7c8a5e02e18dd4_61469_af30b56c924ab0fc6edffb79c92c5c97.webp 400w,
 /bmnr/images/sEM_all_hu14ebbebfb20c34b53f7c8a5e02e18dd4_61469_18e6da2ca2810c9f337bc71c4345713f.webp 760w,
 /bmnr/images/sEM_all_hu14ebbebfb20c34b53f7c8a5e02e18dd4_61469_1200x1200_fit_q75_h2_lanczos.webp 1200w"
