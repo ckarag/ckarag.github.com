@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-428513967" class="chart">&lt;/div>
+&lt;div id="chart-195372864" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-428513967', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-195372864', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -852,7 +852,7 @@ style="border:none;">
 &lt;li>Stock, J. H., &amp;amp; Watson, M. W. (2002). &amp;ldquo;Macroeconomic forecasting using diffusion indexes.&amp;rdquo; Journal of Business &amp;amp; Economic Statistics, 20(2), 147-162.&lt;/li>
 &lt;/ul>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/73.embed?show_link=false">&lt;/iframe></description></item><item><title>The Big Macro Nowcasting Ranking</title><link>https://ckarag.github.io/bmnr/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/bmnr/</guid><description>&lt;p>The objective of this page is to maintain and populate the ranking below, with newly introduced statistical models in an effort to provide a continuously updated comprehensive comparison of methodologies for nowcasting and forecasting macroeconomic activity. The model comparison is based on a set of (pseudo) real-time vintages, formed using a rich standardized set of variables at mixed-frequencies.&lt;/p>
-&lt;p>The performance evaluation currently covers US real GDP growth rate (QoQ%), comparing 20 distinct methodologies (including ML, as well as standard econometric techniques and workhorse benchmarks), which are combined with three data transformations (D1,D2,D3) for taking into account the mixed-frequency dimension. This results into a ranking containing a total of 85 specifications.&lt;/p>
+&lt;p>The performance evaluation currently covers US real GDP growth rate (QoQ%), comparing &lt;em>20 distinct methodologies&lt;/em> (including ML, as well as standard econometric techniques and workhorse benchmarks), which are combined with &lt;em>three data transformations&lt;/em> (D1,D2,D3) for taking into account the mixed-frequency dimension. This results into a ranking containing a total of &lt;em>85 specifications&lt;/em>.&lt;/p>
 &lt;h2 id="dataset">Dataset&lt;/h2>
 &lt;p>The dataset consists of 87 quarterly, and 171 monthly (including 31 financial market) indicators. The indicators correspond to the series found in the FRED-MD and -QD datasets and were downloaded at their original (i.e. highest-available) sampling frequency, whenever possible. Publication release delays were inferred from the metadata in the FRED database (&lt;a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">https://fred.stlouisfed.org&lt;/a>) and then applied to each series to mimic the ragged-edge structure the forecaster would face in reality. The out-of-sample evaluation exercise uses end-of-month vintages at a monthly periodicity, assuming that economic activity is monitored in &lt;em>real-time&lt;/em> by updating the projections at the end of every month.&lt;/p>
 &lt;p>A list of the indicators that compose the mixed-frequency dataset, can be accessed
