@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-865723419" class="chart">&lt;/div>
+&lt;div id="chart-689374251" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-865723419', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-689374251', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -856,7 +856,7 @@ style="border:none;">
 &lt;p>The dataset consists of 87 quarterly, and 171 monthly (including 31 financial market) indicators. The indicators correspond to the series found in the FRED-MD and -QD datasets and were downloaded at their original (i.e. highest-available) sampling frequency, whenever possible. Publication release delays were inferred from the metadata in the FRED database (&lt;a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">https://fred.stlouisfed.org&lt;/a>) and then applied to each series to mimic the ragged-edge structure the forecaster would face in reality. The out-of-sample evaluation exercise uses end-of-month vintages at a monthly periodicity, assuming that economic activity is monitored in &lt;em>real-time&lt;/em> by updating the projections at the end of every month.&lt;/p>
 &lt;p>A list of the indicators that compose the mixed-frequency dataset, can be accessed
 &lt;a href="https://ckarag.github.io/research/datasetMF.csv" target="_blank">here.&lt;/a>
-SeriesID refers to the FRED mnemonic, while the release delay (RDelay) measures the approximate number of days it takes for the respective indicator to be released after the closing of the reference month or quarter. The monthly mixed-frequency vintages used in the POOS model evaluation can be downloaded &lt;a href="https://drive.google.com/file/d/1HpshcZK7v35X5xJNlaQhsFGY9-zd5iDf/view?usp=share_link" target="_blank" rel="noopener">here&lt;/a>. The full set consists of 376 end-of-month vintages spanning the period 19900131-20210430, including monthly and quarterly unbalanced panels whose ragged edge has been imposed by applying the inferred publication delays.&lt;/p>
+&amp;lsquo;SeriesID&amp;rsquo; refers to the FRED mnemonic, while the release delay (&amp;lsquo;RDelay&amp;rsquo;) measures the approximate number of days it takes for the respective indicator to be released after the closing of the reference month or quarter. The monthly mixed-frequency vintages used in the POOS model evaluation can be downloaded &lt;a href="https://drive.google.com/file/d/1HpshcZK7v35X5xJNlaQhsFGY9-zd5iDf/view?usp=share_link" target="_blank" rel="noopener">here&lt;/a>. The full set consists of 376 end-of-month vintages spanning the period 19900131-20210430, including monthly and quarterly unbalanced panels whose ragged edge has been imposed by applying the inferred publication delays.&lt;/p>
 &lt;h3 id="list-of-forecasting-models">List of forecasting models&lt;/h3>
 &lt;table class="table">
 &lt;tr> &lt;th>Acronym&lt;/th> &lt;th>Model Description&lt;/th> &lt;/tr>
