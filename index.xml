@@ -229,7 +229,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-683495172" class="chart">&lt;/div>
+&lt;div id="chart-192684357" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -238,7 +238,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-683495172', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-192684357', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
@@ -844,7 +844,7 @@ style="border:none;">
 &lt;li>Stock, J. H., &amp;amp; Watson, M. W. (2002). &amp;ldquo;Macroeconomic forecasting using diffusion indexes.&amp;rdquo; Journal of Business &amp;amp; Economic Statistics, 20(2), 147-162.&lt;/li>
 &lt;/ul>
 &lt;iframe width="700" height="600" frameborder="0" scrolling="no" src="//plotly.com/~ckara/73.embed?show_link=false">&lt;/iframe></description></item><item><title>The Big Macro Nowcasting Ranking</title><link>https://ckarag.github.io/bmnr/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ckarag.github.io/bmnr/</guid><description>&lt;p>The objective of this page is to maintain and populate the ranking below, with newly introduced statistical models in an effort to provide a continuously updated comprehensive comparison of methodologies for nowcasting and forecasting macroeconomic activity. The model comparison is based on a set of (pseudo) real-time vintages, formed using a rich standardized set of variables at mixed-frequencies.&lt;/p>
-&lt;p>The performance evaluation currently covers US real GDP growth rate (QoQ%), comparing &lt;em>20 distinct methodologies&lt;/em> (including ML, as well as standard econometric techniques and workhorse benchmarks), which are combined with &lt;em>three data transformations&lt;/em> (D1,D2,D3) for taking into account the mixed-frequency dimension. This results into a ranking containing a total of &lt;em>85 specifications&lt;/em>.&lt;/p>
+&lt;p>The performance evaluation currently covers US real GDP growth rate (QoQ%), comparing &lt;em>20 distinct methodologies&lt;/em> (including 14 Machine Learning algorithms, as well as standard econometric techniques and workhorse benchmarks), which are combined with &lt;em>three data transformations&lt;/em> (D1,D2,D3) for taking into account the mixed-frequency dimension. This results into a ranking containing a total of &lt;em>85 specifications&lt;/em>.&lt;/p>
 &lt;h2 id="dataset">Dataset&lt;/h2>
 &lt;p>The dataset consists of 87 quarterly, and 171 monthly (including 32 financial market) indicators. The indicators correspond to the series found in the FRED-MD and -QD datasets and were downloaded at their original (i.e. highest-available) sampling frequency, whenever possible. Publication release delays were inferred from the metadata in the FRED database (&lt;a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">https://fred.stlouisfed.org&lt;/a>) and then applied to each series to mimic the ragged-edge structure the forecaster would face in reality. The out-of-sample evaluation exercise uses end-of-month vintages at a monthly periodicity, assuming that economic activity is monitored in &lt;em>real-time&lt;/em> by updating the projections at the end of every month.&lt;/p>
 &lt;p>A list of the indicators that compose the mixed-frequency dataset, can be accessed
@@ -879,11 +879,11 @@ style="border:none;">
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BBoost&lt;/td>
-&lt;td data-table-dtype="text">Quadratic-loss L2 boosting, block-wise&lt;/td>
+&lt;td data-table-dtype="text">L2 boosting with linear base learner, block-wise lag treatment&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">CBoost&lt;/td>
-&lt;td data-table-dtype="text">Quadratic-loss L2 boosting, component-wise&lt;/td>
+&lt;td data-table-dtype="text">L2 boosting with linear base learner, component-wise lag treatment&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">CSR&lt;/td>
@@ -891,7 +891,7 @@ style="border:none;">
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">Bag&lt;/td>
-&lt;td data-table-dtype="text">Linear bagging with hard-thresholding preselection&lt;/td>
+&lt;td data-table-dtype="text">Bagging dynamic linear regressions (with preselection)&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">BTree&lt;/td>
@@ -943,15 +943,15 @@ style="border:none;">
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">D2&lt;/td>
-&lt;td data-table-dtype="text">Unrestricted MIDAS Polynomials&lt;/td>
+&lt;td data-table-dtype="text">Unrestricted (MIDAS) Lag Polynomials&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td data-table-dtype="text">D3&lt;/td>
-&lt;td data-table-dtype="text">Legendre Polynomials (3rd degree)&lt;/td>
+&lt;td data-table-dtype="text">Aggregation with Legendre Polynomials (3rd degree)&lt;/td>
 &lt;/tr>
 &lt;/table>
 &lt;h2 id="the-ranking-real-time-model-evaluation">The Ranking: Real-time model evaluation&lt;/h2>
-&lt;p>The table reports RMSE’s relative to the AR(1) benchmark for the n-quarters ahead prediction, with n=0 reflecting the nowcast. The models have been ranked wrt the last column which corresponds to the average relative RMSE over all 5 horizons. The real-time POOS evaluation is based on 220 monthly vintages over the period Jan-2003 to Apr-2021. D1 denotes single-frequency information set; D2 U-MIDAS polynomials; and D3 Legendre polynomials. The table ranks specifications coming from the different combinations of ML models with all the transformations D1, D2 and D3 plus their factor-only counterparts. Models with an acronym ending in ‘F’ contain only factors on the RHS.&lt;/p>
+&lt;p>The table reports RMSE’s relative to the AR(1) benchmark for the n-quarters ahead prediction, with n=0 reflecting the nowcast. The models have been ranked wrt the last column which corresponds to the average relative RMSE over all 5 horizons. The real-time POOS evaluation is based on 219 monthly vintages over the period Jan-2003 to Mar-2021. D1 denotes single-frequency information set; D2 Unrestricted (U-MIDAS) lag polynomials; and D3 Legendre-aggregated mixed-frequency information set. The table ranks specifications coming from the different combinations of ML models with all the transformations D1, D2 and D3 plus their factor-only counterparts. Models with an acronym ending in ‘F’ contain only factors on the RHS.&lt;/p>
 &lt;table class="table">
 &lt;tr> &lt;th>Models&lt;/th> &lt;th>n=0&lt;/th> &lt;th>n=1&lt;/th> &lt;th>n=2&lt;/th> &lt;th>n=3&lt;/th> &lt;th>n=4&lt;/th> &lt;th>avg&lt;/th> &lt;/tr>
 &lt;tr>

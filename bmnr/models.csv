@@ -1,21 +1,21 @@
 Acronym,Model Description
-"AR(P)","Autoregressive iterated-specification"
-"RW","Random walk"
-"ARDI(K,BIC)","Autoregressive diffusion indices with K factors. Optimal lag-order via BIC"
-"T.ARDI(K,BIC)","ARDI with target-factors. Hard-threshold set to |t-stat|>1.96"
-"BVAR-Minn","Homoscedastic large Bayesian VAR"
-"BVAR-CSV","Large Bayesian VAR with heteroscedastic innovations"
-"BBoost","Quadratic-loss L2 boosting, block-wise"
-"CBoost","Quadratic-loss L2 boosting, component-wise"
-"CSR","Complete Subset Regressions (20C4) with hard-thresholding preselection"
-"Bag","Linear bagging with hard-thresholding preselection"
-"BTree","Boosting regression trees"
-"RF","Random forests"
-"SVR","Support vector machine regression with Gaussian Kernel function"
-"Ridge","Ridge regression"
-"LASSO","Least absolute shrinkage and selection operator with BIC for lambda"
-"AdaLASSO","Adaptive LASSO"
-"EN","Elastic Net"
-"AdaEN","Adaptive EN"
-"LSTM","Long-short-term memory RNN with 3-hidden layers"
-"SgLASSO","Sparse-group-LASSO-MIDAS with block-K-fold CV for lambda & alpha"
+AR(P),Autoregressive iterated-specification
+RW,Random walk
+"ARDI(K,BIC)",Autoregressive diffusion indices with K factors. Optimal lag-order via BIC
+"T.ARDI(K,BIC)",ARDI with target-factors. Hard-threshold set to |t-stat|>1.96
+BVAR-Minn,Homoscedastic large Bayesian VAR
+BVAR-CSV,Large Bayesian VAR with heteroscedastic innovations
+BBoost,"L2 boosting with linear base learner, block-wise lag treatment"
+CBoost,"L2 boosting with linear base learner, component-wise lag treatment"
+CSR,Complete Subset Regressions (20C4) with hard-thresholding preselection
+Bag,Bagging dynamic linear regressions (with preselection)
+BTree,Boosting regression trees
+RF,Random forests
+SVR,Support vector machine regression with Gaussian Kernel function
+Ridge,Ridge regression
+LASSO,Least absolute shrinkage and selection operator with BIC for lambda
+AdaLASSO,Adaptive LASSO
+EN,Elastic Net
+AdaEN,Adaptive EN
+LSTM,Long-short-term memory RNN with 3-hidden layers
+SgLASSO,Sparse-group-LASSO-MIDAS with block-K-fold CV for lambda & alpha
